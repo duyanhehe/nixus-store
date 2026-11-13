@@ -1,0 +1,64 @@
+{
+  "id": "metricool",
+  "name": "Metricool",
+  "icon": "assets/metricool.png",
+  "category": "Mạng xã hội",
+  "description": "Lên lịch đăng bài lên Facebook, Instagram, TikTok, YouTube, LinkedIn, X, Pinterest, Threads, xem giờ đăng tốt nhất, số liệu từng kênh, số liệu quảng cáo Meta, Google, TikTok và đối thủ, qua MCP chính chủ của Metricool. Đăng nhập Metricool 1 chạm, không cần dán key. Dùng được cả gói Free.",
+  "status": "beta",
+  "transport": "http",
+  "url": "https://ai.metricool.com/mcp",
+  "auth": {
+    "type": "oauth",
+    "fields": [],
+    "guide": "Bấm Kết nối rồi đăng nhập tài khoản Metricool và bấm cho phép.\n\nNixus tự đăng ký ứng dụng theo chuẩn OAuth của Metricool, không cần tạo app hay dán key. Các trang mạng xã hội phải được kết nối sẵn trong Metricool (mỗi thương hiệu một nhóm trang).\n\nMCP chạy trên mọi gói Metricool, kể cả Free, nhưng không nâng giới hạn của gói: gói Free lên lịch tối đa 20 bài mỗi tháng và giữ số liệu 30 ngày.\n\nMuốn Nixus lên lịch hoặc sửa bài thật thì nâng kết nối này lên Toàn quyền; mức Chỉ đọc chỉ xem thương hiệu, bài, lịch đã lên và số liệu.",
+    "guide_url": "https://help.metricool.com/how-to-connect-metricools-mcp-eqp9h",
+    "steps": [
+      {
+        "text": "Trong Metricool, kết nối sẵn các trang mạng xã hội muốn Nixus đăng hoặc đọc số liệu (Facebook, Instagram, TikTok...).",
+        "link": "https://app.metricool.com/",
+        "link_label": "Mở Metricool"
+      },
+      {
+        "text": "Bấm Kết nối bên dưới, đăng nhập Metricool rồi bấm cho phép. Không cần dán key.",
+        "link": "https://help.metricool.com/how-to-connect-metricools-mcp-eqp9h",
+        "link_label": "Xem hướng dẫn của Metricool"
+      },
+      {
+        "text": "Muốn Nixus lên lịch bài thật thì nâng kết nối lên Toàn quyền. Nên thử trước bằng một bài gửi vào hàng chờ duyệt.",
+        "link": "https://help.metricool.com/faqs-about-the-metricool-mcp-1i3w0",
+        "link_label": "Câu hỏi thường gặp"
+      }
+    ]
+  },
+  "tool_meta": {
+    "read": [
+      "get_*",
+      "list_*",
+      "search_*"
+    ],
+    "write": [],
+    "danger": [
+      "post_schedule_post",
+      "create_scheduled_post",
+      "update_schedule_post",
+      "update_scheduled_post",
+      "*schedule*",
+      "*post*",
+      "*publish*",
+      "*send*",
+      "*reply*",
+      "*review*",
+      "*create*",
+      "*update*",
+      "*edit*",
+      "*delete*",
+      "*remove*",
+      "*cancel*",
+      "*campaign*",
+      "*boost*",
+      "*upload*"
+    ]
+  },
+  "default_perm": "readonly",
+  "risk": "Metricool đăng thật lên trang mạng xã hội của bạn: bài lên lịch là tới giờ sẽ tự đăng, khách thấy ngay.\n\nChỉ đọc (mặc định): xem thương hiệu, bài đã đăng, lịch đã lên, giờ đăng tốt nhất, số liệu kênh, số liệu quảng cáo và đối thủ. Không đăng hay sửa gì.\n\nToàn quyền: Nixus lên lịch, sửa bài đã lên lịch và gửi bài vào hàng chờ duyệt bằng tài khoản Metricool của bạn. Bài lên lịch ở gói Free bị tính vào hạn 20 bài mỗi tháng.\n\nTên tool lấy từ tài liệu và bản PyPI của Metricool; bản MCP chạy trên máy chủ của họ có thể đặt tên khác. Vì vậy mọi tool có chữ schedule, post, create, update, delete... đều bị xếp nguy hiểm, kể cả tool chỉ gửi bài vào hàng chờ duyệt. Kết nối này chưa được thử với tài khoản Metricool thật."
+}

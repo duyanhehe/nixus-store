@@ -1,0 +1,12 @@
+format: javis-pack
+spec: 1
+id: nixus.metricool
+version: 1.0.0
+name: {vi: "Metricool: Lên lịch và số liệu mạng xã hội", en: "Metricool: Social scheduling and analytics"}
+description: {vi: "Lên lịch đăng bài lên Facebook, Instagram, TikTok, YouTube, LinkedIn, X, Pinterest, Threads, xem giờ đăng tốt nhất, số liệu từng kênh, số liệu quảng cáo Meta, Google, TikTok và đối thủ, qua MCP chính chủ của Metricool. Đăng nhập Metricool 1 chạm, không cần dán key. Dùng được cả gói Free.", en: "Schedule posts to Facebook, Instagram, TikTok, YouTube, LinkedIn, X, Pinterest and Threads, see the best time to post, per-network analytics, Meta, Google and TikTok Ads analytics and competitors, through Metricool's official MCP. One-click Metricool sign-in, no key to paste. Works on the Free plan."}
+author: {name: Nixus}
+license: MIT
+homepage: "https://help.metricool.com/how-to-connect-metricools-mcp-eqp9h"
+compat: {app: ">=0.55.27"}
+provides:
+  connectors: [connectors/metricool.json]

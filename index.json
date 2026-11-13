@@ -1,7 +1,7 @@
 {
   "format": "javis-pack-index",
   "format_version": 1,
-  "updated": "2026-11-12",
+  "updated": "2026-11-13",
   "store": {
     "name": "Kho cài đặt Javis",
     "url": "https://github.com/blogminhquy/javis-store"
@@ -1108,6 +1108,41 @@
         "url": "dist/javis-zernio-1.0.0.zip",
         "sha256": "6d0cf4c4041f11666afd6dbe9b118c43bd88684fd308c22d6f162a321a936db4",
         "size": 11317
+      }
+    },
+    {
+      "id": "nixus.metricool",
+      "kind": "connector",
+      "name": {
+        "vi": "Metricool: Lên lịch và số liệu mạng xã hội",
+        "en": "Metricool: Social scheduling and analytics"
+      },
+      "description": {
+        "vi": "Lên lịch đăng bài lên Facebook, Instagram, TikTok, YouTube, LinkedIn, X, Pinterest, Threads, xem giờ đăng tốt nhất, số liệu từng kênh, số liệu quảng cáo Meta, Google, TikTok và đối thủ, qua MCP chính chủ của Metricool. Đăng nhập Metricool 1 chạm, không cần dán key. Dùng được cả gói Free.",
+        "en": "Schedule posts to Facebook, Instagram, TikTok, YouTube, LinkedIn, X, Pinterest and Threads, see the best time to post, per-network analytics, Meta, Google and TikTok Ads analytics and competitors, through Metricool's official MCP. One-click Metricool sign-in, no key to paste. Works on the Free plan."
+      },
+      "version": "1.0.0",
+      "author": {
+        "name": "Nixus"
+      },
+      "category": "mang-xa-hoi",
+      "category_label": {
+        "vi": "Mạng xã hội"
+      },
+      "tier": "data",
+      "verified": true,
+      "updated": "2026-11-13",
+      "homepage": "https://help.metricool.com/how-to-connect-metricools-mcp-eqp9h",
+      "icon": "packs/nixus.metricool/assets/metricool.png",
+      "provides": {
+        "connectors": [
+          "metricool"
+        ]
+      },
+      "download": {
+        "url": "dist/nixus-metricool-1.0.0.zip",
+        "sha256": "d1406ea13000b56583ca7b7a0ba9d41c15f5f05c701b7908b8bf920e5aa0cff0",
+        "size": 13016
       }
     },
     {
