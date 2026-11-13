@@ -3,8 +3,8 @@
   "format_version": 1,
   "updated": "2026-11-13",
   "store": {
-    "name": "Kho cài đặt Javis",
-    "url": "https://github.com/blogminhquy/javis-store"
+    "name": "Kho cài đặt Nixus",
+    "url": "https://github.com/duyanhehe/nixus-store"
   },
   "_doc": "Danh mục Javis đọc thẳng. Thêm một mục ở đây là mọi máy đang chạy Javis thấy ngay, không cần bản cập nhật. Cách gửi gói: xem CONTRIBUTING.md. Trường _doc và mọi khoá lạ khác đều bị Javis bỏ qua khi đọc.",
   "packs": [
