@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.marketing-carousel-growth-engine
-version: 1.0.1
-replaces:
-  - javis.agency.marketing-carousel-growth-engine
+version: 1.0.2
 name: {vi: "Máy tạo carousel tăng trưởng", en: "Carousel Growth Engine"}
 description: {vi: "Tự tạo carousel TikTok và Instagram: đọc website bằng Playwright, tạo 6 slide viral bằng Gemini, đăng qua API chính thức hoặc nền tảng đăng đa kênh.",
               en: "Autonomous TikTok and Instagram carousel generation specialist. Analyzes any website URL with Playwright, generates viral 6-slide carousels via Gemini image generation, publishes to TikTok and Instagram through their official APIs or a multi-platform publishing service with auto-added music..."}

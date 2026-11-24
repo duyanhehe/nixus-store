@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.design-visual-storyteller
-version: 1.0.1
-replaces:
-  - javis.agency.design-visual-storyteller
+version: 1.0.2
 name: {vi: "Người kể chuyện bằng hình", en: "Visual Storyteller"}
 description: {vi: "Truyền thông thị giác: dựng câu chuyện bằng hình ảnh, nội dung đa phương tiện, kể chuyện thương hiệu. Biến thông tin phức tạp thành câu chuyện hình ảnh cuốn hút.",
               en: "Expert visual communication specialist focused on creating compelling visual narratives, multimedia content, and brand storytelling through design. Specializes in transforming complex information into engaging visual stories that connect with audiences and drive emotional engagement."}

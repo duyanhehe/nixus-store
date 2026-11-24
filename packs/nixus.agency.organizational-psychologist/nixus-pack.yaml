@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.organizational-psychologist
-version: 1.0.1
-replaces:
-  - javis.agency.organizational-psychologist
+version: 1.0.2
 name: {vi: "Nhà tâm lý học tổ chức", en: "Organizational Psychologist"}
 description: {vi: "Chẩn đoán động lực đội nhóm, an toàn tâm lý, nguy cơ kiệt sức và sức khoẻ văn hoá, giúp lãnh đạo xây tổ chức hiệu suất cao, bền bỉ.",
               en: "Applied organizational psychologist who diagnoses team dynamics, psychological safety, burnout risk, and culture health - using evidence-based frameworks to help leaders build high-performing, resilient, and psychologically safe organizations."}

@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.marketing-content-creator
-version: 1.0.1
-replaces:
-  - javis.agency.marketing-content-creator
+version: 1.0.2
 name: {vi: "Người sáng tạo nội dung", en: "Content Creator"}
 description: {vi: "Chiến lược và sáng tạo nội dung đa nền tảng: lịch biên tập, viết bài cuốn hút, kể chuyện thương hiệu, tối ưu tương tác trên mọi kênh số.",
               en: "Expert content strategist and creator for multi-platform campaigns. Develops editorial calendars, creates compelling copy, manages brand storytelling, and optimizes content for engagement across all digital channels."}

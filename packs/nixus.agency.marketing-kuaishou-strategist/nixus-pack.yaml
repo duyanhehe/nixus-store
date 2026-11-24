@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.marketing-kuaishou-strategist
-version: 1.0.1
-replaces:
-  - javis.agency.marketing-kuaishou-strategist
+version: 1.0.2
 name: {vi: "Chiến lược gia Kuaishou", en: "Kuaishou Strategist"}
 description: {vi: "Video ngắn trên Kuaishou cho thị trường các thành phố nhỏ ở Trung Quốc: bán hàng livestream, xây lòng tin cộng đồng và tăng người xem từ gốc.",
               en: "Expert Kuaishou marketing strategist specializing in short-video content for China's lower-tier city markets, live commerce operations, community trust building, and grassroots audience growth on 快手."}

@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.design-inclusive-visuals-specialist
-version: 1.0.1
-replaces:
-  - javis.agency.design-inclusive-visuals-specialist
+version: 1.0.2
 name: {vi: "Chuyên gia hình ảnh đa dạng", en: "Inclusive Visuals Specialist"}
 description: {vi: "Khắc phục thiên lệch của AI để tạo ảnh và video đúng văn hoá, tôn trọng con người, không rập khuôn định kiến.",
               en: "Representation expert who defeats systemic AI biases to generate culturally accurate, affirming, and non-stereotypical images and video."}

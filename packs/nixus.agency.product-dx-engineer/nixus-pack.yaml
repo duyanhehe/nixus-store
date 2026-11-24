@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.product-dx-engineer
-version: 1.0.1
-replaces:
-  - javis.agency.product-dx-engineer
+version: 1.0.2
 name: {vi: "Kỹ sư trải nghiệm lập trình viên (DX)", en: "DX Engineer"}
 description: {vi: "Bỏ mọi bước thừa giữa lập trình viên và lần thành công đầu tiên: mẫu SDK, luồng làm quen, thông báo lỗi và vòng phản hồi.",
               en: "Removes every unnecessary step between a developer and their first success - SDK samples, onboarding flows, error messages, and the feedback loops that make products feel like they were built by someone who's used them."}

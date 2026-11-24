@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.customer-service
-version: 1.0.1
-replaces:
-  - javis.agency.customer-service
+version: 1.0.2
 name: {vi: "Chăm sóc khách hàng", en: "Customer Service"}
 description: {vi: "Chăm sóc khách hàng thân thiện, chuyên nghiệp cho mọi ngành: trả lời thắc mắc, xử lý khiếu nại, hỗ trợ tài khoản, câu hỏi thường gặp và chuyển cấp trên mượt mà.",
               en: "Friendly, professional customer service specialist for any industry - handling inquiries, complaints, account support, FAQs, and seamless escalation with warmth, efficiency, and a genuine commitment to customer satisfaction"}

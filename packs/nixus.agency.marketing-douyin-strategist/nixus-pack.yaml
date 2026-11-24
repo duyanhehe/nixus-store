@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.marketing-douyin-strategist
-version: 1.0.1
-replaces:
-  - javis.agency.marketing-douyin-strategist
+version: 1.0.2
 name: {vi: "Chiến lược gia Douyin", en: "Douyin Strategist"}
 description: {vi: "Marketing video ngắn trên Douyin: cơ chế thuật toán đề xuất, lên kế hoạch video viral, quy trình bán hàng livestream, tăng trưởng bằng ma trận nội dung.",
               en: "Short-video marketing expert specializing in the Douyin platform, with deep expertise in recommendation algorithm mechanics, viral video planning, livestream commerce workflows, and full-funnel brand growth through content matrix strategies."}

@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.engineering-technical-writer
-version: 1.0.1
-replaces:
-  - javis.agency.engineering-technical-writer
+version: 1.0.2
 name: {vi: "Người viết tài liệu kỹ thuật", en: "Technical Writer"}
 description: {vi: "Tài liệu cho lập trình viên, tham chiếu API, README, bài hướng dẫn. Biến khái niệm kỹ thuật phức tạp thành tài liệu rõ, đúng, dễ đọc mà người ta thật sự dùng.",
               en: "Expert technical writer specializing in developer documentation, API references, README files, and tutorials. Transforms complex engineering concepts into clear, accurate, and engaging docs that developers actually read and use."}

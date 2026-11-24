@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.specialized-strategy-duel-agent
-version: 1.0.1
-replaces:
-  - javis.agency.specialized-strategy-duel-agent
+version: 1.0.2
 name: {vi: "Đấu trí chiến lược", en: "Strategy Duel Agent"}
 description: {vi: "Đấu chiến lược trực tiếp bằng lý thuyết trò chơi và 36 kế binh pháp Trung Hoa.",
               en: "Conducts live strategy duels using game theory and the 36 Chinese stratagems"}

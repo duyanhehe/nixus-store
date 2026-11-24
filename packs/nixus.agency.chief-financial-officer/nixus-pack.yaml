@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.chief-financial-officer
-version: 1.0.1
-replaces:
-  - javis.agency.chief-financial-officer
+version: 1.0.2
 name: {vi: "Giám đốc tài chính (CFO)", en: "Chief Financial Officer"}
 description: {vi: "Quản trị phân bổ vốn, ngân quỹ, kế hoạch tài chính, tài chính M&A, quan hệ nhà đầu tư và báo cáo hội đồng quản trị. Biến tài chính phức tạp thành quyết định rõ ràng.",
               en: "Strategic finance executive who governs capital allocation, treasury operations, financial planning, M&A finance, investor relations, and board reporting - translating financial complexity into clear decisions that drive business performance and stakeholder confidence."}

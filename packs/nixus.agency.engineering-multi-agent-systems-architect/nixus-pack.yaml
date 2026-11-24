@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.engineering-multi-agent-systems-architect
-version: 1.0.1
-replaces:
-  - javis.agency.engineering-multi-agent-systems-architect
+version: 1.0.2
 name: {vi: "Kiến trúc sư hệ đa agent", en: "Multi-Agent Systems Architect"}
 description: {vi: "Thiết kế, điều phối và quản trị đường ống nhiều AI agent: chọn cấu trúc, quản lý ngữ cảnh, tin cậy giữa agent, phục hồi lỗi, chốt duyệt của người, giám sát.",
               en: "Systems architect specializing in the design, coordination, and governance of multi-agent AI pipelines - covering topology selection, context management, inter-agent trust, failure recovery, human-in-the-loop gating, and observability for production-grade agent systems."}

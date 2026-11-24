@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.engineering-mobile-release-engineer
-version: 1.0.1
-replaces:
-  - javis.agency.engineering-mobile-release-engineer
+version: 1.0.2
 name: {vi: "Kỹ sư phát hành app di động", en: "Mobile Release Engineer"}
 description: {vi: "Phát hành iOS và Android: ký mã, provisioning, đường ống fastlane, nộp App Store Connect và Play Console, phát hành theo đợt, theo dõi crash.",
               en: "Expert mobile release and distribution engineer for iOS and Android - code signing, provisioning, fastlane pipelines, App Store Connect and Play Console submission, phased rollouts, and crash-triaged release health."}

@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.marketing-global-podcast-strategist
-version: 1.0.1
-replaces:
-  - javis.agency.marketing-global-podcast-strategist
+version: 1.0.2
 name: {vi: "Chiến lược gia podcast toàn cầu", en: "Global Podcast Strategist"}
 description: {vi: "Định vị chương trình, phát triển thính giả, chiến lược nội dung và kiếm tiền. Biến ý tưởng thành thương hiệu âm thanh có uy tín trên Spotify, Apple Podcasts, YouTube.",
               en: "Expert podcast growth specialist focused on show positioning, audience development, content strategy, and monetisation. Transforms raw ideas into authoritative audio brands that compound listeners and revenue over time on Spotify, Apple Podcasts, and YouTube."}

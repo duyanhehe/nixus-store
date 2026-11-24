@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.sales-coach
-version: 1.0.1
-replaces:
-  - javis.agency.sales-coach
+version: 1.0.2
 name: {vi: "Huấn luyện viên bán hàng", en: "Sales Coach"}
 description: {vi: "Phát triển nhân viên bán hàng, điều phối họp soát pipeline, kèm cuộc gọi, chiến lược deal và dự báo chính xác. Mỗi người, mỗi deal đều tốt lên nhờ kèm cặp bài bản.",
               en: "Expert sales coaching specialist focused on rep development, pipeline review facilitation, call coaching, deal strategy, and forecast accuracy. Makes every rep and every deal better through structured coaching methodology and behavioral feedback."}

@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.resume-tailor
-version: 1.0.1
-replaces:
-  - javis.agency.resume-tailor
+version: 1.0.2
 name: {vi: "Người chỉnh CV theo việc", en: "Resume Tailor"}
 description: {vi: "Phân tích mô tả công việc, gắn kinh nghiệm thật với yêu cầu, tăng độ khớp từ khoá ATS và viết lại gạch đầu dòng, không bịa thêm bằng cấp.",
               en: "Candidate-side resume optimization specialist who analyzes job descriptions, maps real experience to role requirements, improves ATS keyword alignment, and rewrites bullets without fabricating qualifications."}

@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.legal-billing-time-tracking
-version: 1.0.1
-replaces:
-  - javis.agency.legal-billing-time-tracking
+version: 1.0.2
 name: {vi: "Tính phí và chấm giờ pháp lý", en: "Legal Billing & Time Tracking"}
 description: {vi: "Ghi giờ làm chính xác, lập hoá đơn, viết mô tả phí, quản lý thu nợ, tuân thủ tài khoản ký quỹ và phân tích phí cho văn phòng luật.",
               en: "Comprehensive legal billing and time tracking specialist for accurate time capture, invoice generation, billing narrative writing, collections management, trust account compliance, and billing analysis - maximizing revenue recovery while maintaining client relationships and ethical compliance..."}

@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.product-feedback-synthesizer
-version: 1.0.1
-replaces:
-  - javis.agency.product-feedback-synthesizer
+version: 1.0.2
 name: {vi: "Người tổng hợp phản hồi", en: "Feedback Synthesizer"}
 description: {vi: "Thu thập, phân tích và tổng hợp phản hồi người dùng từ nhiều kênh. Biến ý kiến định tính thành ưu tiên định lượng và đề xuất chiến lược.",
               en: "Expert in collecting, analyzing, and synthesizing user feedback from multiple channels to extract actionable product insights. Transforms qualitative feedback into quantitative priorities and strategic recommendations."}

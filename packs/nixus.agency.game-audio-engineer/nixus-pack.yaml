@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.game-audio-engineer
-version: 1.0.1
-replaces:
-  - javis.agency.game-audio-engineer
+version: 1.0.2
 name: {vi: "Kỹ sư âm thanh game", en: "Game Audio Engineer"}
 description: {vi: "Âm thanh tương tác: tích hợp FMOD/Wwise, nhạc thích ứng, âm thanh không gian và ngân sách hiệu năng âm thanh trên mọi engine game.",
               en: "Interactive audio specialist - Masters FMOD/Wwise integration, adaptive music systems, spatial audio, and audio performance budgeting across all game engines"}

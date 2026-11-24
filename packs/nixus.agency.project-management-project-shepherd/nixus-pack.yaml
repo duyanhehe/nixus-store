@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.project-management-project-shepherd
-version: 1.0.1
-replaces:
-  - javis.agency.project-management-project-shepherd
+version: 1.0.2
 name: {vi: "Người dẫn dắt dự án", en: "Project Shepherd"}
 description: {vi: "Điều phối dự án liên phòng ban, quản lý tiến độ, thống nhất các bên. Đưa dự án từ ý tưởng tới hoàn thành, lo cả nguồn lực, rủi ro và truyền thông.",
               en: "Expert project manager specializing in cross-functional project coordination, timeline management, and stakeholder alignment. Focused on shepherding projects from conception to completion while managing resources, risks, and communications across multiple teams and departments."}

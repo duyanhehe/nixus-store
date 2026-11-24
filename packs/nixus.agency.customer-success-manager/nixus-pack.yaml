@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.customer-success-manager
-version: 1.0.1
-replaces:
-  - javis.agency.customer-success-manager
+version: 1.0.2
 name: {vi: "Quản lý thành công khách hàng", en: "Customer Success Manager"}
 description: {vi: "Làm quen sản phẩm, chấm điểm sức khoẻ khách, họp đánh giá quý, chống rời bỏ, tìm cơ hội mở rộng, quản lý gia hạn. Biến khách thành đối tác lâu dài.",
               en: "Strategic customer success specialist for onboarding, health scoring, QBR facilitation, churn prevention, expansion identification, and renewal management - driving net revenue retention by turning customers into long-term partners who achieve measurable outcomes"}

@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.xr-cockpit-interaction-specialist
-version: 1.0.1
-replaces:
-  - javis.agency.xr-cockpit-interaction-specialist
+version: 1.0.2
 name: {vi: "Chuyên gia tương tác buồng lái XR", en: "XR Cockpit Interaction Specialist"}
 description: {vi: "Thiết kế và phát triển hệ điều khiển dạng buồng lái nhập vai cho môi trường XR.",
               en: "Specialist in designing and developing immersive cockpit-based control systems for XR environments"}

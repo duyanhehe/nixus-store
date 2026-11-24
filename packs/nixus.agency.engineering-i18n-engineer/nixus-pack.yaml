@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.engineering-i18n-engineer
-version: 1.0.1
-replaces:
-  - javis.agency.engineering-i18n-engineer
+version: 1.0.2
 name: {vi: "Kỹ sư đa ngôn ngữ (i18n)", en: "Internationalization Engineer"}
 description: {vi: "ICU MessageFormat, quy tắc số nhiều CLDR, bố cục phải sang trái, định dạng ngày, số, tiền theo vùng, rút chuỗi dịch và kiểm thử bản địa hoá giả.",
               en: "Expert i18n engineer for ICU MessageFormat, CLDR plural rules, RTL and bidirectional layouts, locale-aware date/number/currency formatting, string extraction pipelines, and pseudo-localization testing."}

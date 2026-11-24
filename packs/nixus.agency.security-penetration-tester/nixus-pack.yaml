@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.security-penetration-tester
-version: 1.0.1
-replaces:
-  - javis.agency.security-penetration-tester
+version: 1.0.2
 name: {vi: "Chuyên gia kiểm thử xâm nhập", en: "Penetration Tester"}
 description: {vi: "Kiểm thử xâm nhập có ủy quyền, diễn tập red team và đánh giá lỗ hổng trên mạng, ứng dụng web và hạ tầng đám mây.",
               en: "Offensive security specialist conducting authorized penetration tests, red team operations, and vulnerability assessments across networks, web applications, and cloud infrastructure."}

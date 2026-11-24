@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.research-synthesist
-version: 1.0.1
-replaces:
-  - javis.agency.research-synthesist
+version: 1.0.2
 name: {vi: "Người tổng hợp nghiên cứu", en: "Research Synthesist"}
 description: {vi: "Tổng quan tài liệu, đánh giá nguồn, tổng hợp bằng chứng. Biến một đống nguồn rời rạc thành bản đồ có cấu trúc, cân nhắc trung thực bằng chứng thật sự ủng hộ điều gì.",
               en: "Expert in literature review, source evaluation, and evidence synthesis - turns a scattered pile of sources into a structured, honestly-weighted map of what the evidence actually supports"}

@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.gis-spatial-data-scientist
-version: 1.0.1
-replaces:
-  - javis.agency.gis-spatial-data-scientist
+version: 1.0.2
 name: {vi: "Nhà khoa học dữ liệu không gian", en: "Spatial Data Scientist"}
 description: {vi: "Phân tích không gian nâng cao: mô hình thống kê, kinh tế lượng không gian, gom cụm, dự báo, tìm ra quy luật mà nhìn bản đồ không thấy.",
               en: "Advanced spatial analytics specialist who applies statistical modeling, spatial econometrics, clustering, and predictive analytics to geospatial data - finding patterns that aren't visible on a map."}

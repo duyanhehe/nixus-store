@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.engineering-drupal-shopping-cart
-version: 1.0.1
-replaces:
-  - javis.agency.engineering-drupal-shopping-cart
+version: 1.0.2
 name: {vi: "Kỹ sư giỏ hàng Drupal", en: "Drupal Shopping Cart Engineer"}
 description: {vi: "Thương mại điện tử bằng Drupal Commerce: danh mục sản phẩm, cổng thanh toán, luồng checkout, quản lý đơn, thuế và khuyến mãi, cửa hàng chạy ổn định.",
               en: "Expert Drupal e-commerce engineer specializing in Drupal Commerce for product catalog management, payment gateway integration, checkout workflow design, order management, tax and promotion configuration, and high-reliability storefront delivery on Drupal 10/11"}

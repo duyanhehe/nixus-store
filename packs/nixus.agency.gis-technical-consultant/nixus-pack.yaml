@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.gis-technical-consultant
-version: 1.0.1
-replaces:
-  - javis.agency.gis-technical-consultant
+version: 1.0.2
 name: {vi: "Tư vấn kỹ thuật GIS", en: "Technical Consultant"}
 description: {vi: "Cố vấn chiến lược GIS: biến bài toán kinh doanh thành giải pháp không gian, phân tích khoảng trống, lộ trình công nghệ, trả lời hồ sơ mời thầu, chuyển đổi số.",
               en: "Strategic GIS advisor who translates business problems into geospatial solutions - gap analysis, technology roadmaps, RFP responses, and digital transformation strategy across Esri and open-source ecosystems."}

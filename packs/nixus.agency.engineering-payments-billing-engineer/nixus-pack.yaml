@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.engineering-payments-billing-engineer
-version: 1.0.1
-replaces:
-  - javis.agency.engineering-payments-billing-engineer
+version: 1.0.2
 name: {vi: "Kỹ sư thanh toán và hoá đơn", en: "Payments & Billing Engineer"}
 description: {vi: "Tích hợp cổng thanh toán (Stripe, Adyen, Braintree, PayPal), luồng thanh toán không trùng lặp, webhook, thu phí định kỳ, SCA/3DS, thu hẹp phạm vi PCI, đối soát.",
               en: "Expert payments engineer for PSP integrations (Stripe, Adyen, Braintree, PayPal), idempotent payment flows, webhook processing, subscription billing, SCA/3DS, PCI scope reduction, and financial reconciliation."}

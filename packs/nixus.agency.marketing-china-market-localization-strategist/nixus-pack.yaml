@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.marketing-china-market-localization-strategist
-version: 1.0.1
-replaces:
-  - javis.agency.marketing-china-market-localization-strategist
+version: 1.0.2
 name: {vi: "Chiến lược gia bản địa hoá Trung Quốc", en: "China Market Localization Strategist"}
 description: {vi: "Biến tín hiệu xu hướng thời gian thực thành chiến lược ra thị trường Trung Quốc chạy được trên Douyin, Xiaohongshu, WeChat, Bilibili và các kênh khác.",
               en: "Full-stack China market localization expert who transforms real-time trend signals into executable go-to-market strategies across Douyin, Xiaohongshu, WeChat, Bilibili, and beyond"}

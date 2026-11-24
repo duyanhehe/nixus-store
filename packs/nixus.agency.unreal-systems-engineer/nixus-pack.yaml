@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.unreal-systems-engineer
-version: 1.0.1
-replaces:
-  - javis.agency.unreal-systems-engineer
+version: 1.0.2
 name: {vi: "Kỹ sư hệ thống Unreal", en: "Unreal Systems Engineer"}
 description: {vi: "Hiệu năng và kiến trúc lai: kết hợp C++ với Blueprint, hình học Nanite, chiếu sáng Lumen và Gameplay Ability System cho dự án Unreal chuẩn AAA.",
               en: "Performance and hybrid architecture specialist - Masters C++/Blueprint continuum, Nanite geometry, Lumen GI, and Gameplay Ability System for AAA-grade Unreal Engine projects"}

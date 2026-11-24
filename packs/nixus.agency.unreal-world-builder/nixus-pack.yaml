@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.unreal-world-builder
-version: 1.0.1
-replaces:
-  - javis.agency.unreal-world-builder
+version: 1.0.2
 name: {vi: "Người dựng thế giới Unreal", en: "Unreal World Builder"}
 description: {vi: "Thế giới mở và môi trường: World Partition, Landscape, cây cỏ thủ tục, HLOD và nạp màn chơi lớn liền mạch trong UE5.",
               en: "Open-world and environment specialist - Masters UE5 World Partition, Landscape, procedural foliage, HLOD, and large-scale level streaming for seamless open-world experiences"}

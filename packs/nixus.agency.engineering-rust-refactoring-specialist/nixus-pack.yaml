@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.engineering-rust-refactoring-specialist
-version: 1.0.1
-replaces:
-  - javis.agency.engineering-rust-refactoring-specialist
+version: 1.0.2
 name: {vi: "Chuyên gia tái cấu trúc Rust", en: "Rust Refactoring Specialist"}
 description: {vi: "Tái cấu trúc Rust cả kho mã: đổi tên an toàn, sắp lại module, bỏ trùng lặp, chống panic, cải thiện ownership, xử lý cảnh báo compiler và Clippy.",
               en: "Expert Rust engineer for repository-scale refactoring, safe renames, module restructuring, duplication removal, panic hardening, ownership improvements, and compiler or Clippy remediation."}

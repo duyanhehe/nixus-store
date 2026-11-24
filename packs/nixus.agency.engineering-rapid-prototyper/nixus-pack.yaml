@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.engineering-rapid-prototyper
-version: 1.0.1
-replaces:
-  - javis.agency.engineering-rapid-prototyper
+version: 1.0.2
 name: {vi: "Người làm nguyên mẫu nhanh", en: "Rapid Prototyper"}
 description: {vi: "Làm bản thử nghiệm và MVP siêu nhanh bằng công cụ và framework hiệu quả.",
               en: "Specialized in ultra-fast proof-of-concept development and MVP creation using efficient tools and frameworks"}

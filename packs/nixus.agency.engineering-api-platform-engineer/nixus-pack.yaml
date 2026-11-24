@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.engineering-api-platform-engineer
-version: 1.0.1
-replaces:
-  - javis.agency.engineering-api-platform-engineer
+version: 1.0.2
 name: {vi: "Kỹ sư nền tảng API", en: "API Platform Engineer"}
 description: {vi: "API công khai và cho đối tác: thiết kế theo hợp đồng (OpenAPI/gRPC), chính sách phiên bản, sinh SDK, cổng API (xác thực, giới hạn tần suất) và trải nghiệm cổng lập trình viên.",
               en: "Expert API platform engineer for public and partner APIs - contract-first design (OpenAPI/gRPC), versioning and deprecation policy, SDK generation, API gateway concerns (auth, rate limiting, quotas), and developer-portal DX."}

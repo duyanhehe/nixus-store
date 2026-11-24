@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.marketing-bilibili-content-strategist
-version: 1.0.1
-replaces:
-  - javis.agency.marketing-bilibili-content-strategist
+version: 1.0.2
 name: {vi: "Chiến lược gia nội dung Bilibili", en: "Bilibili Content Strategist"}
 description: {vi: "Marketing trên Bilibili: phát triển kênh UP主, văn hoá bình luận chạy chữ (danmaku), thuật toán B站, xây cộng đồng và nội dung thương hiệu.",
               en: "Expert Bilibili marketing specialist focused on UP主 growth, danmaku culture mastery, B站 algorithm optimization, community building, and branded content strategy for China's leading video community platform."}

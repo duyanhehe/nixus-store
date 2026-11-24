@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.marketing-app-store-optimizer
-version: 1.0.1
-replaces:
-  - javis.agency.marketing-app-store-optimizer
+version: 1.0.2
 name: {vi: "Tối ưu kho ứng dụng (ASO)", en: "App Store Optimizer"}
 description: {vi: "Marketing trên kho ứng dụng: tối ưu ASO, tỉ lệ chuyển đổi trang app và khả năng được tìm thấy.",
               en: "Expert app store marketing specialist focused on App Store Optimization (ASO), conversion rate optimization, and app discoverability"}

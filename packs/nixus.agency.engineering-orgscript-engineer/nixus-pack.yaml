@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.engineering-orgscript-engineer
-version: 1.0.1
-replaces:
-  - javis.agency.engineering-orgscript-engineer
+version: 1.0.2
 name: {vi: "Kỹ sư OrgScript", en: "OrgScript Engineer"}
 description: {vi: "Thiết kế, phân tích cú pháp và triển khai ngữ pháp OrgScript, kiểm tra AST và định nghĩa logic nghiệp vụ.",
               en: "Expert in designing, parsing, and implementing OrgScript grammar, AST validation, and business logic definitions."}

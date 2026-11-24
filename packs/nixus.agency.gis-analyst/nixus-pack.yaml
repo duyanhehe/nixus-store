@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.gis-analyst
-version: 1.0.1
-replaces:
-  - javis.agency.gis-analyst
+version: 1.0.2
 name: {vi: "Chuyên viên GIS", en: "GIS Analyst"}
 description: {vi: "Vận hành GIS hằng ngày: làm bản đồ, quản lý lớp dữ liệu, truy vấn không gian và giữ dữ liệu địa lý chuẩn xác trên máy tính lẫn web.",
               en: "Day-to-day GIS operator who creates maps, manages layers, performs spatial queries, and maintains geospatial data integrity across desktop and web environments."}

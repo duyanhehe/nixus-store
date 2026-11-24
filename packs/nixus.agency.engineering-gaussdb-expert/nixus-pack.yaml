@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.engineering-gaussdb-expert
-version: 1.0.1
-replaces:
-  - javis.agency.engineering-gaussdb-expert
+version: 1.0.2
 name: {vi: "Chuyên gia GaussDB", en: "GaussDB Expert Engineer"}
 description: {vi: "Cơ sở dữ liệu GaussDB OLTP của Huawei: thiết kế schema, bảng phân tán, tối ưu truy vấn và vận hành.",
               en: "Expert database specialist focusing on GaussDB OLTP - Huawei's self-developed enterprise-grade relational database (NOT GaussDB(DWS) OLAP, NOT GaussDB(for openGauss) cloud service, NOT GaussDB(for MySQL)). Covers schema design, distributed table design, query optimization, indexing, Ustore..."}

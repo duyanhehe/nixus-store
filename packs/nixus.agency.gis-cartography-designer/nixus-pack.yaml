@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.gis-cartography-designer
-version: 1.0.1
-replaces:
-  - javis.agency.gis-cartography-designer
+version: 1.0.2
 name: {vi: "Nhà thiết kế bản đồ", en: "Cartography Designer"}
 description: {vi: "Bản đồ đẹp, dễ đọc, hiệu quả: lý thuyết màu, chữ, đặt nhãn, chọn bản đồ nền và thứ bậc thị giác cho bản in lẫn bản web.",
               en: "Map aesthetics specialist who designs beautiful, readable, and effective maps - color theory, typography, label placement, basemap selection, and visual hierarchy for both print and web."}

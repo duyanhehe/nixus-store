@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.engineering-it-service-manager
-version: 1.0.1
-replaces:
-  - javis.agency.engineering-it-service-manager
+version: 1.0.2
 name: {vi: "Quản lý dịch vụ IT", en: "IT Service Manager"}
 description: {vi: "Quản lý dịch vụ IT theo ITIL 4: danh mục dịch vụ, xử lý sự cố và vấn đề, kiểm soát thay đổi, quản trị SLA, CMDB và cải tiến liên tục.",
               en: "Expert IT service management specialist using ITIL 4 framework for service catalog design, incident and problem management, change control, SLA governance, CMDB maintenance, and continual service improvement - ensuring IT delivers reliable, measurable business value across any organization size"}

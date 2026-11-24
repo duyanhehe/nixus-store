@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.marketing-podcast-strategist
-version: 1.0.1
-replaces:
-  - javis.agency.marketing-podcast-strategist
+version: 1.0.2
 name: {vi: "Chiến lược gia podcast Trung Quốc", en: "Podcast Strategist"}
 description: {vi: "Podcast trên Xiaoyuzhou, Ximalaya và các nền tảng âm thanh lớn: định vị chương trình, sản xuất, tăng thính giả, phân phối đa kênh và kiếm tiền.",
               en: "Content strategy and operations expert for the Chinese podcast market, with deep expertise in Xiaoyuzhou, Ximalaya, and other major audio platforms, covering show positioning, audio production, audience growth, multi-platform distribution, and monetization to help podcast creators build sticky..."}

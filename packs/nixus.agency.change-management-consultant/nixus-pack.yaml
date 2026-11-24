@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.change-management-consultant
-version: 1.0.1
-replaces:
-  - javis.agency.change-management-consultant
+version: 1.0.2
 name: {vi: "Tư vấn quản trị thay đổi", en: "Change Management Consultant"}
 description: {vi: "Dùng ADKAR, Kotter, Prosci dẫn tổ chức qua triển khai công nghệ, tái cấu trúc, đổi văn hoá và sáp nhập: xử lý kháng cự, tăng mức chấp nhận.",
               en: "Expert change management specialist using ADKAR, Kotter, and Prosci frameworks to guide organizations through technology implementations, restructuring, culture transformation, and M&A integration - managing resistance, building adoption, and ensuring changes stick long after go-live"}

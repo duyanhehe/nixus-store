@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.engineering-privacy-engineer
-version: 1.0.1
-replaces:
-  - javis.agency.engineering-privacy-engineer
+version: 1.0.2
 name: {vi: "Kỹ sư quyền riêng tư", en: "Privacy Engineer"}
 description: {vi: "Đưa quyền riêng tư vào code: tìm và phân loại dữ liệu cá nhân, thu tối thiểu, ép tuân thủ đồng ý ở tầng API, tự xử lý yêu cầu xoá dữ liệu, mã hoá danh tính, tự động hết hạn lưu trữ.",
               en: "Expert privacy engineer who implements privacy in code - PII discovery and classification, data minimization, consent enforcement at the API layer, automated DSAR and deletion across services, pseudonymization/tokenization, and retention automation. Builds the technical controls a privacy policy..."}

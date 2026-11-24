@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.gis-3d-scene-developer
-version: 1.0.1
-replaces:
-  - javis.agency.gis-3d-scene-developer
+version: 1.0.2
 name: {vi: "Lập trình cảnh 3D", en: "3D & Scene Developer"}
 description: {vi: "Trực quan 3D trên web: cảnh 3D sống động, mô hình địa hình, đám mây điểm và trải nghiệm web tương tác bằng Cesium, ArcGIS Scene Viewer và framework 3D hiện đại.",
               en: "Web 3D visualization specialist who creates immersive 3D scenes, terrain models, point cloud visualizations, and interactive web experiences using Cesium, ArcGIS Scene Viewer, and modern 3D web frameworks."}

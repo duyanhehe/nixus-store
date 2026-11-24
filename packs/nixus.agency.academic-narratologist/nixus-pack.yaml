@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.academic-narratologist
-version: 1.0.1
-replaces:
-  - javis.agency.academic-narratologist
+version: 1.0.2
 name: {vi: "Chuyên gia tự sự học", en: "Narratologist"}
 description: {vi: "Lý thuyết kể chuyện, cấu trúc truyện, cung nhân vật, phân tích văn học. Góp ý dựa trên khung đã kiểm chứng, từ Propp, Campbell tới tự sự học hiện đại.",
               en: "Expert in narrative theory, story structure, character arcs, and literary analysis - grounds advice in established frameworks from Propp to Campbell to modern narratology"}

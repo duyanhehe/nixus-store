@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.marketing-email-strategist
-version: 1.0.1
-replaces:
-  - javis.agency.marketing-email-strategist
+version: 1.0.2
 name: {vi: "Chiến lược gia email marketing", en: "Email Marketing Strategist"}
 description: {vi: "Chiến dịch email theo CRM, tự động hoá vòng đời, phân khúc, khả năng vào hộp thư. Thiết kế chuỗi chào mừng, nuôi dưỡng, kéo khách quay lại, xin đánh giá, giới thiệu.",
               en: "Expert email marketing strategist for CRM-driven campaigns, lifecycle automation, segmentation architecture, and deliverability. Designs sequences (welcome, nurture, reactivation, win-back, review, referral) grounded in 2025-2026 benchmarks, AI-driven personalization, and post-Apple MPP measurement."}

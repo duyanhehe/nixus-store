@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.engineering-llm-post-training-engineer
-version: 1.0.1
-replaces:
-  - javis.agency.engineering-llm-post-training-engineer
+version: 1.0.2
 name: {vi: "Kỹ sư hậu huấn luyện LLM", en: "LLM Post-Training Engineer"}
 description: {vi: "Phụ trách SFT, tối ưu theo ưu tiên, RLHF/RLVR, hậu huấn luyện MoE và các cổng phát hành biến một checkpoint thành thay đổi mô hình có căn cứ.",
               en: "Evidence-driven owner for SFT, preference optimization, RLHF/RLVR, MoE post-training, and the release gates that turn a checkpoint into a defensible model change."}

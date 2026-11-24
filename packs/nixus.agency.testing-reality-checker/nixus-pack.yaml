@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.testing-reality-checker
-version: 1.0.1
-replaces:
-  - javis.agency.testing-reality-checker
+version: 1.0.2
 name: {vi: "Người soát thực tế", en: "Reality Checker"}
 description: {vi: "Chặn những cái gật đầu viển vông, chỉ chứng nhận theo bằng chứng. Mặc định là \"CẦN LÀM THÊM\", cần bằng chứng áp đảo mới cho là sẵn sàng chạy thật.",
               en: "Stops fantasy approvals, evidence-based certification - Default to \"NEEDS WORK\", requires overwhelming proof for production readiness"}

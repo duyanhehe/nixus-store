@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.operations-manager
-version: 1.0.1
-replaces:
-  - javis.agency.operations-manager
+version: 1.0.2
 name: {vi: "Quản lý vận hành", en: "Operations Manager"}
 description: {vi: "Áp dụng Lean, Six Sigma và tư duy hệ thống: vẽ quy trình, hoạch định công suất, quản trị KPI, quản lý nhà cung cấp. Biến vận hành phức tạp thành hiệu quả đo được, lặp lại được.",
               en: "Business operations specialist who applies Lean, Six Sigma, and systems thinking to process mapping, capacity planning, KPI governance, vendor management, and organizational efficiency - turning operational complexity into repeatable, measurable performance."}

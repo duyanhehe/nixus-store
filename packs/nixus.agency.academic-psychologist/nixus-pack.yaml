@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.academic-psychologist
-version: 1.0.1
-replaces:
-  - javis.agency.academic-psychologist
+version: 1.0.2
 name: {vi: "Nhà tâm lý học", en: "Psychologist"}
 description: {vi: "Hành vi con người, lý thuyết nhân cách, động lực và mẫu nhận thức. Dựng nhân vật và tương tác đáng tin về tâm lý, dựa trên khung lâm sàng và nghiên cứu.",
               en: "Expert in human behavior, personality theory, motivation, and cognitive patterns - builds psychologically credible characters and interactions grounded in clinical and research frameworks"}

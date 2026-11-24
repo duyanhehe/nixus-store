@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.marketing-xiaohongshu-specialist
-version: 1.0.1
-replaces:
-  - javis.agency.marketing-xiaohongshu-specialist
+version: 1.0.2
 name: {vi: "Chuyên gia Xiaohongshu", en: "Xiaohongshu Specialist"}
 description: {vi: "Marketing trên Xiaohongshu: nội dung phong cách sống, chiến lược theo xu hướng, tương tác cộng đồng thật, nội dung ngắn và kể chuyện thẩm mỹ để lan toả.",
               en: "Expert Xiaohongshu marketing specialist focused on lifestyle content, trend-driven strategies, and authentic community engagement. Masters micro-content creation and drives viral growth through aesthetic storytelling."}

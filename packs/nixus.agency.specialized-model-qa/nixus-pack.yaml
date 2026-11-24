@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.specialized-model-qa
-version: 1.0.1
-replaces:
-  - javis.agency.specialized-model-qa
+version: 1.0.2
 name: {vi: "Chuyên gia kiểm định mô hình", en: "Model QA Specialist"}
 description: {vi: "Kiểm định độc lập mô hình máy học và thống kê từ đầu đến cuối: soát tài liệu, dựng lại dữ liệu, tái lập, kiểm hiệu chuẩn, khả năng giải thích, báo cáo chuẩn kiểm toán.",
               en: "Independent model QA expert who audits ML and statistical models end-to-end - from documentation review and data reconstruction to replication, calibration testing, interpretability analysis, performance monitoring, and audit-grade reporting."}

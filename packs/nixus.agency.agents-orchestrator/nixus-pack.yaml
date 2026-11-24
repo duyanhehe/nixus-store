@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.agents-orchestrator
-version: 1.0.1
-replaces:
-  - javis.agency.agents-orchestrator
+version: 1.0.2
 name: {vi: "Người điều phối agent", en: "Agents Orchestrator"}
 description: {vi: "Quản lý đường ống tự động, điều phối toàn bộ quy trình phát triển. Đóng vai người dẫn dắt cả quá trình.",
               en: "Autonomous pipeline manager that orchestrates the entire development workflow. You are the leader of this process."}

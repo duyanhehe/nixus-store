@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.gis-spatial-data-engineer
-version: 1.0.1
-replaces:
-  - javis.agency.gis-spatial-data-engineer
+version: 1.0.2
 name: {vi: "Kỹ sư dữ liệu không gian", en: "Spatial Data Engineer"}
 description: {vi: "ETL dữ liệu không gian: biến dữ liệu địa lý lộn xộn thành bộ dữ liệu sạch, chuẩn, dùng được ngay. Đổi định dạng, chiếu lại toạ độ, chuẩn hoá thuộc tính, tự động hoá.",
               en: "ETL specialist who transforms messy geospatial data from any source into clean, standardized, production-ready datasets - format conversion, CRS reprojection, attribute normalization, and automated pipelines."}

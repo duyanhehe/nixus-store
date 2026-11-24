@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.marketing-pr-communications-manager
-version: 1.0.1
-replaces:
-  - javis.agency.marketing-pr-communications-manager
+version: 1.0.2
 name: {vi: "Quản lý PR và truyền thông", en: "PR & Communications Manager"}
 description: {vi: "Quan hệ báo chí, thông cáo, truyền thông khủng hoảng, xây hình ảnh lãnh đạo, quản lý danh tiếng thương hiệu và kế hoạch truyền thông tích hợp.",
               en: "Strategic public relations and communications specialist for media relations, press releases, crisis communications, executive thought leadership, brand reputation management, and integrated communications planning - building and protecting reputations through earned media, storytelling, and..."}

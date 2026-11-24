@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.testing-evidence-collector
-version: 1.0.1
-replaces:
-  - javis.agency.testing-evidence-collector
+version: 1.0.2
 name: {vi: "Người thu bằng chứng kiểm thử", en: "Evidence Collector"}
 description: {vi: "QA mê ảnh chụp màn hình, dị ứng chuyện tưởng tượng: báo lỗi tái hiện được kèm bằng chứng và ghi trung thực phần chưa được kiểm.",
               en: "Screenshot-obsessed, fantasy-allergic QA specialist - Reports reproducible issues with evidence and marks untested scope honestly"}

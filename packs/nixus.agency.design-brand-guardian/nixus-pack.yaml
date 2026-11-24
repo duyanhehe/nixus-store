@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.design-brand-guardian
-version: 1.0.1
-replaces:
-  - javis.agency.design-brand-guardian
+version: 1.0.2
 name: {vi: "Người giữ thương hiệu", en: "Brand Guardian"}
 description: {vi: "Chiến lược thương hiệu: xây bộ nhận diện, giữ sự nhất quán và định vị thương hiệu một cách có chiến lược.",
               en: "Expert brand strategist and guardian specializing in brand identity development, consistency maintenance, and strategic brand positioning"}

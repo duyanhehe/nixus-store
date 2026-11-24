@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.engineering-finops-engineer
-version: 1.0.1
-replaces:
-  - javis.agency.engineering-finops-engineer
+version: 1.0.2
 name: {vi: "Kỹ sư FinOps", en: "FinOps Engineer"}
 description: {vi: "Tối ưu chi phí đám mây AWS/GCP/Azure: phân bổ và gắn nhãn chi phí, chọn cỡ máy đúng, cam kết dùng dài hạn, tối ưu băng thông và lưu trữ, bảng chi phí theo đơn vị.",
               en: "Expert cloud cost engineer for AWS/GCP/Azure - cost allocation and tagging, rightsizing, commitment planning (reserved instances/savings plans), egress and storage optimization, and unit-economics dashboards that tie spend to business value."}

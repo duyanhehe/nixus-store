@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.engineering-desktop-app-engineer
-version: 1.0.1
-replaces:
-  - javis.agency.engineering-desktop-app-engineer
+version: 1.0.2
 name: {vi: "Kỹ sư ứng dụng máy tính", en: "Desktop App Engineer"}
 description: {vi: "Ứng dụng desktop bằng Electron và Tauri: IPC an toàn, cách ly tiến trình, ký mã và công chứng, tự cập nhật, tích hợp hệ điều hành, giữ ứng dụng nhẹ.",
               en: "Expert desktop application engineer for Electron and Tauri - secure IPC and process isolation, code signing and notarization, auto-update pipelines, native OS integration, and resource-footprint discipline."}

@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.engineering-wordpress-shopping-cart
-version: 1.0.1
-replaces:
-  - javis.agency.engineering-wordpress-shopping-cart
+version: 1.0.2
 name: {vi: "Kỹ sư giỏ hàng WordPress", en: "WordPress Shopping Cart Engineer"}
 description: {vi: "Thương mại điện tử bằng WooCommerce: danh mục sản phẩm, cổng thanh toán, tuỳ biến checkout, quản lý đơn, thuế và mã giảm giá, cửa hàng tối ưu chuyển đổi.",
               en: "Expert WordPress e-commerce engineer specializing in WooCommerce for product catalog management, payment gateway integration, checkout customization, order management, tax and coupon configuration, and conversion-optimized storefront delivery on WordPress"}

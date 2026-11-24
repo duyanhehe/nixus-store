@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.godot-multiplayer-engineer
-version: 1.0.1
-replaces:
-  - javis.agency.godot-multiplayer-engineer
+version: 1.0.2
 name: {vi: "Kỹ sư nhiều người chơi Godot", en: "Godot Multiplayer Engineer"}
 description: {vi: "Mạng trong Godot 4: MultiplayerAPI, đồng bộ scene, truyền tải ENet/WebRTC, RPC và mô hình quyền kiểm soát cho game nhiều người chơi thời gian thực.",
               en: "Godot 4 networking specialist - Masters the MultiplayerAPI, scene replication, ENet/WebRTC transport, RPCs, and authority models for real-time multiplayer games"}

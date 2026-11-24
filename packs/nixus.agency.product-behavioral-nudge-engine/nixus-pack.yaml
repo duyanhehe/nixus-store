@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.product-behavioral-nudge-engine
-version: 1.0.1
-replaces:
-  - javis.agency.product-behavioral-nudge-engine
+version: 1.0.2
 name: {vi: "Bộ máy thúc đẩy hành vi", en: "Behavioral Nudge Engine"}
 description: {vi: "Tâm lý học hành vi: điều chỉnh nhịp và cách phần mềm tương tác với người dùng để họ có động lực và thành công nhiều nhất.",
               en: "Behavioral psychology specialist that adapts software interaction cadences and styles to maximize user motivation and success."}

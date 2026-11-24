@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.healthcare-innovation-strategist
-version: 1.0.1
-replaces:
-  - javis.agency.healthcare-innovation-strategist
+version: 1.0.2
 name: {vi: "Chiến lược gia đổi mới y tế", en: "Healthcare Innovation Strategist"}
 description: {vi: "Xây câu chuyện chiến lược cho nhà sáng lập trong ngành y tế: định vị, thông điệp gọi vốn và đối tác.",
               en: "Strategic narrative architect for healthcare founders operating at the intersection of clinical credibility, healthcare finance, and complex deployment contexts. Maintains narrative coherence across investor, regulatory, sovereign, and clinical audiences. Built for founders who need to translate..."}

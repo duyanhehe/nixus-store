@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.gis-solution-engineer
-version: 1.0.1
-replaces:
-  - javis.agency.gis-solution-engineer
+version: 1.0.2
 name: {vi: "Kỹ sư giải pháp GIS", en: "Solution Engineer"}
 description: {vi: "Dựng nguyên mẫu GIS bằng tay: biến chiến lược thành bản demo, bản thử khái niệm và kiểm chứng kỹ thuật trên Esri và mã nguồn mở.",
               en: "Hands-on GIS prototype builder who takes strategy from Technical Consultant and turns it into working demos, proof-of-concepts, and technical validations across the full Esri and open-source stack."}

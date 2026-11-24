@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.marketing-instagram-curator
-version: 1.0.1
-replaces:
-  - javis.agency.marketing-instagram-curator
+version: 1.0.2
 name: {vi: "Người phụ trách Instagram", en: "Instagram Curator"}
 description: {vi: "Kể chuyện bằng hình ảnh, xây cộng đồng và tối ưu nội dung đa định dạng trên Instagram. Xây phong cách thẩm mỹ và tạo tương tác thật.",
               en: "Expert Instagram marketing specialist focused on visual storytelling, community building, and multi-format content optimization. Masters aesthetic development and drives meaningful engagement."}

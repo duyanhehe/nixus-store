@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.blender-addon-engineer
-version: 1.0.1
-replaces:
-  - javis.agency.blender-addon-engineer
+version: 1.0.2
 name: {vi: "Kỹ sư add-on Blender", en: "Blender Add-on Engineer"}
 description: {vi: "Viết add-on Python cho Blender, công cụ kiểm tài nguyên, bộ xuất file và tự động hoá đường ống, biến việc lặp lại thành thao tác một cú bấm.",
               en: "Blender tooling specialist - Builds Python add-ons, asset validators, exporters, and pipeline automations that turn repetitive DCC work into reliable one-click workflows"}

@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.security-cloud-security-architect
-version: 1.0.1
-replaces:
-  - javis.agency.security-cloud-security-architect
+version: 1.0.2
 name: {vi: "Kiến trúc sư bảo mật đám mây", en: "Cloud Security Architect"}
 description: {vi: "Kiến trúc zero trust, phòng thủ nhiều lớp trên AWS, Azure, GCP và bảo mật đường ống hạ tầng dạng code ngay từ ngày đầu.",
               en: "Cloud-native security specialist designing zero trust architectures, implementing defense-in-depth across AWS, Azure, and GCP, and securing infrastructure-as-code pipelines from day one."}

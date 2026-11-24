@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.finance-financial-analyst
-version: 1.0.1
-replaces:
-  - javis.agency.finance-financial-analyst
+version: 1.0.2
 name: {vi: "Chuyên viên phân tích tài chính", en: "Financial Analyst"}
 description: {vi: "Mô hình tài chính, dự báo, phân tích kịch bản, hỗ trợ ra quyết định bằng dữ liệu. Biến số liệu tài chính thô thành thông tin kinh doanh dùng được ngay.",
               en: "Expert financial analyst specializing in financial modeling, forecasting, scenario analysis, and data-driven decision support. Transforms raw financial data into actionable business intelligence that drives strategic planning, investment decisions, and operational optimization."}

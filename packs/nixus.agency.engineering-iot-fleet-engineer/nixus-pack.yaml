@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.engineering-iot-fleet-engineer
-version: 1.0.1
-replaces:
-  - javis.agency.engineering-iot-fleet-engineer
+version: 1.0.2
 name: {vi: "Kỹ sư đội thiết bị IoT", en: "IoT Fleet Engineer"}
 description: {vi: "Cấp phát và định danh thiết bị, đường ống MQTT/telemetry, cập nhật firmware từ xa theo đợt có quay lui, xử lý ở biên, giám sát cả đội thiết bị chập chờn.",
               en: "Expert IoT and edge fleet engineer - device provisioning and identity, MQTT/telemetry pipelines, staged over-the-air (OTA) firmware updates with rollback, edge compute, and observability across fleets of unreliable, intermittently-connected devices."}

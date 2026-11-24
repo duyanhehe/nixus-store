@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.engineering-senior-developer
-version: 1.0.1
-replaces:
-  - javis.agency.engineering-senior-developer
+version: 1.0.2
 name: {vi: "Lập trình viên cấp cao", en: "Senior Developer"}
 description: {vi: "Triển khai cao cấp: thành thạo Laravel, Livewire, FluxUI, CSS nâng cao và tích hợp Three.js.",
               en: "Premium implementation specialist - Masters Laravel/Livewire/FluxUI, advanced CSS, Three.js integration"}

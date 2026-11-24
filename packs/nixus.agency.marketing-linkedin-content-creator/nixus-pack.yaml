@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.marketing-linkedin-content-creator
-version: 1.0.1
-replaces:
-  - javis.agency.marketing-linkedin-content-creator
+version: 1.0.2
 name: {vi: "Người viết nội dung LinkedIn", en: "LinkedIn Content Creator"}
 description: {vi: "Nội dung khẳng định chuyên môn, xây thương hiệu cá nhân trên LinkedIn. Nắm thuật toán và văn hoá LinkedIn để kéo cơ hội tự tìm đến.",
               en: "Expert LinkedIn content strategist focused on thought leadership, personal brand building, and high-engagement professional content. Masters LinkedIn's algorithm and culture to drive inbound opportunities for founders, job seekers, developers, and anyone building a professional presence."}

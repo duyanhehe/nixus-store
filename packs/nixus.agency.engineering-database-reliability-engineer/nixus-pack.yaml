@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.engineering-database-reliability-engineer
-version: 1.0.1
-replaces:
-  - javis.agency.engineering-database-reliability-engineer
+version: 1.0.2
 name: {vi: "Kỹ sư độ tin cậy cơ sở dữ liệu", en: "Database Reliability Engineer"}
 description: {vi: "Sẵn sàng cao và nhân bản, tự chuyển dự phòng, sao lưu và khôi phục theo thời điểm, đổi schema không dừng hệ thống, connection pool, diễn tập thảm hoạ.",
               en: "Expert database reliability engineer (DBRE) - high availability and replication, automated failover, backup and point-in-time recovery, zero-downtime online schema migrations, connection pooling, and disaster-recovery drills. Focused on keeping data safe and available, not query tuning."}

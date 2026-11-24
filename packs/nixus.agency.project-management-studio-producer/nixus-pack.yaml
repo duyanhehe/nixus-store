@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.project-management-studio-producer
-version: 1.0.1
-replaces:
-  - javis.agency.project-management-studio-producer
+version: 1.0.2
 name: {vi: "Nhà sản xuất studio", en: "Studio Producer"}
 description: {vi: "Điều phối dự án sáng tạo và kỹ thuật cấp cao, phân bổ nguồn lực, quản lý danh mục nhiều dự án, nối tầm nhìn sáng tạo với mục tiêu kinh doanh.",
               en: "Senior strategic leader specializing in high-level creative and technical project orchestration, resource allocation, and multi-project portfolio management. Focused on aligning creative vision with business objectives while managing complex cross-functional initiatives and ensuring optimal..."}

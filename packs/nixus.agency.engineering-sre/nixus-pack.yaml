@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.engineering-sre
-version: 1.0.1
-replaces:
-  - javis.agency.engineering-sre
+version: 1.0.2
 name: {vi: "Kỹ sư độ tin cậy hệ thống (SRE)", en: "SRE (Site Reliability Engineer)"}
 description: {vi: "SLO, ngân sách lỗi, khả năng quan sát, thử nghiệm hỗn loạn và giảm việc tay chân cho hệ thống chạy thật ở quy mô lớn.",
               en: "Expert site reliability engineer specializing in SLOs, error budgets, observability, chaos engineering, and toil reduction for production systems at scale."}

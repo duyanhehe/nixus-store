@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.macos-spatial-metal-engineer
-version: 1.0.1
-replaces:
-  - javis.agency.macos-spatial-metal-engineer
+version: 1.0.2
 name: {vi: "Kỹ sư Metal và không gian macOS", en: "macOS Spatial/Metal Engineer"}
 description: {vi: "Swift và Metal native: hệ thống dựng hình 3D hiệu năng cao và trải nghiệm điện toán không gian cho macOS và Vision Pro.",
               en: "Native Swift and Metal specialist building high-performance 3D rendering systems and spatial computing experiences for macOS and Vision Pro"}

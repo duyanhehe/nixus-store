@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.godot-gameplay-scripter
-version: 1.0.1
-replaces:
-  - javis.agency.godot-gameplay-scripter
+version: 1.0.2
 name: {vi: "Lập trình gameplay Godot", en: "Godot Gameplay Scripter"}
 description: {vi: "GDScript 2.0, tích hợp C#, kiến trúc dựa trên node và thiết kế signal an toàn kiểu dữ liệu cho dự án Godot 4.",
               en: "Composition and signal integrity specialist - Masters GDScript 2.0, C# integration, node-based architecture, and type-safe signal design for Godot 4 projects"}

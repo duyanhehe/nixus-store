@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.engineering-incident-response-commander
-version: 1.0.1
-replaces:
-  - javis.agency.engineering-incident-response-commander
+version: 1.0.2
 name: {vi: "Chỉ huy xử lý sự cố", en: "Incident Response Commander"}
 description: {vi: "Quản lý sự cố trên hệ thống thật, điều phối phản ứng có cấu trúc, họp rút kinh nghiệm, theo dõi SLO/SLI và thiết kế quy trình trực.",
               en: "Expert incident commander specializing in production incident management, structured response coordination, post-mortem facilitation, SLO/SLI tracking, and on-call process design for reliable engineering organizations."}

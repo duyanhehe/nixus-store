@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.healthcare-sovereign-health-systems-agent
-version: 1.0.1
-replaces:
-  - javis.agency.healthcare-sovereign-health-systems-agent
+version: 1.0.2
 name: {vi: "Trợ lý hệ thống y tế quốc gia", en: "Sovereign Health Systems Agent"}
 description: {vi: "Khung làm việc với các chương trình, nhiệm vụ y tế của chính phủ cho AI agent.",
               en: "Government health mandate engagement framework for AI agents operating at the intersection of national health infrastructure, UHC policy, and emerging market deployment. Defines how to navigate sovereign health ministry engagement, frame health technology for mandate alignment, and sequence a..."}

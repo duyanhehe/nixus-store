@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.automation-governance-architect
-version: 1.0.1
-replaces:
-  - javis.agency.automation-governance-architect
+version: 1.0.2
 name: {vi: "Kiến trúc sư quản trị tự động hoá", en: "Automation Governance Architect"}
 description: {vi: "Quản trị tự động hoá kinh doanh (ưu tiên n8n): soát giá trị, rủi ro và khả năng bảo trì trước khi triển khai.",
               en: "Governance-first architect for business automations (n8n-first) who audits value, risk, and maintainability before implementation."}

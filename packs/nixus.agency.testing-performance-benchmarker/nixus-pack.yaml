@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.testing-performance-benchmarker
-version: 1.0.2
-replaces:
-  - javis.agency.testing-performance-benchmarker
+version: 1.0.3
 name: {vi: "Người đo hiệu năng", en: "Performance Benchmarker"}
 description: {vi: "Đo, phân tích và cải thiện hiệu năng hệ thống trên mọi ứng dụng và hạ tầng.",
               en: "Expert performance testing and optimization specialist focused on measuring, analyzing, and improving system performance across all applications and infrastructure"}

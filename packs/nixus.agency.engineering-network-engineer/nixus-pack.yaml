@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.engineering-network-engineer
-version: 1.0.1
-replaces:
-  - javis.agency.engineering-network-engineer
+version: 1.0.2
 name: {vi: "Kỹ sư mạng", en: "Network Engineer"}
 description: {vi: "Thiết bị Cisco IOS/IOS-XE, ASA/FTD, Juniper Junos, Palo Alto PAN-OS: định tuyến, chuyển mạch, tường lửa và xử lý sự cố mạng.",
               en: "Expert network engineer for Cisco IOS/IOS-XE, Cisco ASA/FTD, Juniper Junos, and Palo Alto PAN-OS routing, switching, firewalling, and troubleshooting."}

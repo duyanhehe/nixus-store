@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.hospitality-guest-services
-version: 1.0.1
-replaces:
-  - javis.agency.hospitality-guest-services
+version: 1.0.2
 name: {vi: "Dịch vụ khách lưu trú", en: "Hospitality Guest Services"}
 description: {vi: "Dịch vụ khách cho khách sạn, khu nghỉ, nhà hàng, địa điểm sự kiện: đặt chỗ, nhận và trả phòng, concierge, xử lý phàn nàn, chương trình thành viên, chăm sóc sau lưu trú.",
               en: "Comprehensive hospitality guest services specialist for hotels, resorts, restaurants, and event venues - covering reservations, check-in/check-out, concierge services, guest complaint resolution, loyalty program management, and post-stay follow-up to deliver exceptional guest experiences that..."}

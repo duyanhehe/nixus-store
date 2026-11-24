@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.sales-engineer
-version: 1.0.1
-replaces:
-  - javis.agency.sales-engineer
+version: 1.0.2
 name: {vi: "Kỹ sư bán hàng (presales)", en: "Sales Engineer"}
 description: {vi: "Khai thác kỹ thuật, dựng demo, phạm vi POC, thẻ so sánh đối thủ, nối tính năng sản phẩm với kết quả kinh doanh. Thắng phần quyết định kỹ thuật để deal chốt được.",
               en: "Senior pre-sales engineer specializing in technical discovery, demo engineering, POC scoping, competitive battlecards, and bridging product capabilities to business outcomes. Wins the technical decision so the deal can close."}

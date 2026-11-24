@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.design-ux-architect
-version: 1.0.1
-replaces:
-  - javis.agency.design-ux-architect
+version: 1.0.2
 name: {vi: "Kiến trúc sư UX", en: "UX Architect"}
 description: {vi: "Chuyên gia kiến trúc kỹ thuật và UX: cho lập trình viên nền móng vững, hệ thống CSS và hướng dẫn triển khai rõ ràng.",
               en: "Technical architecture and UX specialist who provides developers with solid foundations, CSS systems, and clear implementation guidance"}

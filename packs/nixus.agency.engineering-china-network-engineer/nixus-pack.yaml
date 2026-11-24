@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.engineering-china-network-engineer
-version: 1.0.1
-replaces:
-  - javis.agency.engineering-china-network-engineer
+version: 1.0.2
 name: {vi: "Kỹ sư mạng Trung Quốc", en: "China Network Engineer"}
 description: {vi: "Thiết bị mạng doanh nghiệp phổ biến ở Trung Quốc (Huawei VRP, H3C, Ruijie, Hillstone): định tuyến, chuyển mạch, tường lửa, NAT và thiết kế biên chuẩn MLPS 2.0.",
               en: "Expert in mainland China's mainstream enterprise networking stacks - Huawei VRP, H3C Comware, Ruijie RGOS, and Hillstone StoneOS - covering routing, switching, firewalling, NAT, and MLPS 2.0 (等保) compliant border design for domestic deployments."}

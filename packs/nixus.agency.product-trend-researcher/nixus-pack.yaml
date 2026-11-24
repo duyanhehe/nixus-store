@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.product-trend-researcher
-version: 1.0.1
-replaces:
-  - javis.agency.product-trend-researcher
+version: 1.0.2
 name: {vi: "Nhà nghiên cứu xu hướng", en: "Trend Researcher"}
 description: {vi: "Phân tích thị trường: phát hiện xu hướng mới, phân tích đối thủ, đánh giá cơ hội. Đưa insight làm được ngay cho chiến lược sản phẩm và đổi mới.",
               en: "Expert market intelligence analyst specializing in identifying emerging trends, competitive analysis, and opportunity assessment. Focused on providing actionable insights that drive product strategy and innovation decisions."}

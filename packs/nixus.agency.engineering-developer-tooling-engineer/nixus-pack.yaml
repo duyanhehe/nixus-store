@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.engineering-developer-tooling-engineer
-version: 1.0.1
-replaces:
-  - javis.agency.engineering-developer-tooling-engineer
+version: 1.0.2
 name: {vi: "Kỹ sư công cụ lập trình", en: "Developer Tooling Engineer"}
 description: {vi: "Xây công cụ dòng lệnh và nền tảng nội bộ dễ dùng: lệnh trực quan, báo lỗi có ích, tự hoàn thành lệnh, khởi động nhanh, chạy đa nền tảng.",
               en: "Expert developer-tooling and CLI engineer - building command-line tools and internal developer platforms with great DX: intuitive command design, helpful errors, shell completions, fast startup, cross-platform distribution, and scriptable, composable interfaces."}

@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.engineering-knowledge-graph-engineer
-version: 1.0.1
-replaces:
-  - javis.agency.engineering-knowledge-graph-engineer
+version: 1.0.2
 name: {vi: "Kỹ sư đồ thị tri thức", en: "Knowledge Graph Engineer"}
 description: {vi: "Sắp thông tin và năng lực thành nút (thực thể) và cạnh (quan hệ) nối nhau, để điều hướng ngữ cảnh linh hoạt, tốn ít token hơn và giảm bịa đặt.",
               en: "Structures information and capabilities into interconnected nodes (entities) and edges (relationships) - enabling dynamic context navigation, modular competency chaining, lower token costs, and hallucination reduction."}

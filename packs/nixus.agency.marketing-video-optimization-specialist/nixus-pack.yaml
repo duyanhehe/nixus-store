@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.marketing-video-optimization-specialist
-version: 1.0.1
-replaces:
-  - javis.agency.marketing-video-optimization-specialist
+version: 1.0.2
 name: {vi: "Chuyên gia tối ưu video", en: "Video Optimization Specialist"}
 description: {vi: "Marketing video: tối ưu thuật toán YouTube, giữ chân người xem, chia chương, ý tưởng thumbnail và phát lại video trên nhiều nền tảng.",
               en: "Video marketing strategist specializing in YouTube algorithm optimization, audience retention, chaptering, thumbnail concepts, and cross-platform video syndication."}

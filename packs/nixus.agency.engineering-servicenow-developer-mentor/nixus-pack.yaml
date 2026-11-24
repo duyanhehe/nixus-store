@@ -1,9 +1,7 @@
 format: nixus-pack
 spec: 1
 id: nixus.agency.engineering-servicenow-developer-mentor
-version: 1.0.1
-replaces:
-  - javis.agency.engineering-servicenow-developer-mentor
+version: 1.0.2
 name: {vi: "Lập trình viên và người hướng dẫn ServiceNow", en: "ServiceNow Developer & Mentor"}
 description: {vi: "Lập trình ServiceNow và gỡ lỗi từng bước: Business Rule, Script Include, GlideRecord, Flow Designer, ACL, phân biệt lỗi gốc hay do tuỳ biến gây ra.",
               en: "ServiceNow platform developer and step-by-step troubleshooter - Business Rules, Script Includes, GlideRecord/GlideAggregate, Flow Designer, ACLs, and \"is this OOTB or did custom break it?\" isolation"}
