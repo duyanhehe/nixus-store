@@ -2,11 +2,11 @@
 
 Vì sao có tệp này
 -----------------
-Javis hiện tên gói thuê bao (Claude, ChatGPT qua Codex, Grok, Antigravity) trên trang Models và
+Nixus hiện tên gói thuê bao (Claude, ChatGPT qua Codex, Grok, Antigravity) trên trang Models và
 vòng hạn mức. Chỉ Claude Code tự gửi tên đang bán (`planDisplayName`). Codex chỉ gửi mã, và mã
 không theo kịp tên: `prolite` là gói 100 đô, `pro` là gói 200 đô đã đổi tên. Ghi bảng tên trong mã
-Javis thì mỗi lần nhà cung cấp đổi tên phải ra bản mới, nên bảng nằm ở đây: sửa một dòng là mọi máy
-thấy ở lần làm mới kế tiếp (Javis đọc tệp này, giữ 6 giờ như danh mục gói).
+Nixus thì mỗi lần nhà cung cấp đổi tên phải ra bản mới, nên bảng nằm ở đây: sửa một dòng là mọi máy
+thấy ở lần làm mới kế tiếp (Nixus đọc tệp này, giữ 6 giờ như danh mục gói).
 
 Lịch "Dò tên gói nhà cung cấp" (chạy trên cloud mỗi tuần) đọc tin đổi tên rồi mở Pull Request sửa
 tệp này. Chủ kho bấm duyệt; không có gì tự trộn.
@@ -43,8 +43,8 @@ def kiem(tep: Path) -> list:
     except ValueError as e:
         return [f"{tep.name}: JSON hỏng ({e})"]
     loi = []
-    if d.get("format") != "javis-plan-names":
-        loi.append(f"{tep.name}: format phải là javis-plan-names")
+    if d.get("format") != "nixus-plan-names":
+        loi.append(f"{tep.name}: format phải là nixus-plan-names")
     if int(d.get("format_version") or 0) != 1:
         loi.append(f"{tep.name}: format_version phải là 1")
     if not re.match(r"^\d{4}-\d{2}-\d{2}$", str(d.get("updated") or "")):

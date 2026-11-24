@@ -8,8 +8,8 @@
 Vì sao có loại gói này
 ----------------------
 Gói skill bên thứ 3 trước đây (Hermes, Superpowers, ECC...) là BẢN CHỤP: chép một lần, sửa
-frontmatter cho khớp Javis, rồi đứng yên ở 1.0.0. Tác giả gốc sửa skill bao nhiêu lần thì người
-dùng Javis vẫn chạy bản cũ, vì không ai nhớ đi chép lại.
+frontmatter cho khớp Nixus, rồi đứng yên ở 1.0.0. Tác giả gốc sửa skill bao nhiêu lần thì người
+dùng Nixus vẫn chạy bản cũ, vì không ai nhớ đi chép lại.
 
 Chủ kho đề xuất 2026-10-28: một mục "repo khuyên dùng", giữ nguyên chất repo gốc mà lại được cập
 nhật thường xuyên. Tệp này là nửa kho của ý đó:
@@ -17,18 +17,18 @@ nhật thường xuyên. Tệp này là nửa kho của ý đó:
 - Mỗi gói khai một tệp `theo-goc/<id>.json`: repo gốc, nhánh, và thư mục nào chép vào đâu.
 - Mỗi ngày job `theo-goc` trong CI chạy tệp này. Repo gốc đổi nội dung skill thì gói lên một
   bản vá (1.0.0 -> 1.0.1), zip đóng lại, `index.json` ghi commit gốc mà nội dung được lấy từ đó.
-- Javis đã có sẵn phần còn lại: chuông báo "Store có bản mới", nút Cập nhật qua màn hình xác
-  nhận, và luật không ghi đè tệp người dùng đã sửa (`pack_vault.py` bên javis-os).
+- Nixus đã có sẵn phần còn lại: chuông báo "Store có bản mới", nút Cập nhật qua màn hình xác
+  nhận, và luật không ghi đè tệp người dùng đã sửa (`pack_vault.py` bên nixusai).
 
 Giữ nguyên chất nghĩa là KHÔNG sửa một byte nào của skill: không dịch, không rút gọn mô tả,
 không thêm `group`. Khác hẳn gói bản chụp ở trên. Cái giá: mô tả dài hơn 150 ký tự bị router
-của Javis cắt, nên chỉ nhận vào đây repo có câu mở đầu mô tả đủ nghĩa.
+của Nixus cắt, nên chỉ nhận vào đây repo có câu mở đầu mô tả đủ nghĩa.
 
 Gói agent (`den: "agents"`, từ 2026-10-29)
 ------------------------------------------
 Repo như agency-agents để mỗi agent là một tệp `.md` có frontmatter kiểu Claude Code (`name`,
-`description`, `color`...). Javis đọc agent bằng khoá khác (`name`, `role`, `tags`), nên với agent
-THÂN PROMPT giữ nguyên từng byte, còn phần đầu tệp thêm vài khoá cho Javis: `type`, `slug`, `name`
+`description`, `color`...). Nixus đọc agent bằng khoá khác (`name`, `role`, `tags`), nên với agent
+THÂN PROMPT giữ nguyên từng byte, còn phần đầu tệp thêm vài khoá cho Nixus: `type`, `slug`, `name`
 và `role` (tiếng Việt nếu có bản dịch), `tags`, `group`. Tên gốc chuyển sang `ten_goc`, các khoá gốc
 khác giữ nguyên dòng. Mỗi mục `chep` là một nhóm agent, khai `nhan` (tên nhóm vi/en, thành tag) và
 `category` (nhóm trong Store, nhãn khai ở `nhom_kho`). `tien_to` đặt trước slug để không đè agent
@@ -37,7 +37,7 @@ cùng tên người dùng đã có.
 Tên và mô tả tiếng Việt nằm ở `theo-goc/dich/<id>.json` ({tên tệp gốc: [tên, mô tả]}), do người
 viết. Agent mới ở repo gốc chưa có bản dịch thì dùng tên và mô tả tiếng Anh, không chặn đồng bộ.
 
-`tach` (tiền tố id, ví dụ `javis.agency.`): ngoài gói gộp, mỗi agent còn thành MỘT gói riêng trong
+`tach` (tiền tố id, ví dụ `nixus.agency.`): ngoài gói gộp, mỗi agent còn thành MỘT gói riêng trong
 Store để người dùng cài lẻ từng agent. Gói lẻ dựng lại cùng lượt với gói gộp, từ đúng nội dung đó,
 lên bản vá khi agent của nó đổi, và biến mất khi repo gốc bỏ agent. Gói lẻ không mang `upstream`
 (chỉ gói gộp nằm ở mục Đề xuất), mà mang `thuoc_goi` trỏ về gói gộp.
@@ -55,13 +55,13 @@ trong skill, đổi là phải chờ duyệt.
 
 Viết lại biến chỉ plugin mới có (`thay`, từ 2026-11-06)
 ------------------------------------------------------
-Skill viết cho plugin Claude Code gọi lệnh qua `${CLAUDE_PLUGIN_ROOT}`. Javis cài skill vào
+Skill viết cho plugin Claude Code gọi lệnh qua `${CLAUDE_PLUGIN_ROOT}`. Nixus cài skill vào
 `skills/<slug>/` của brain và không đặt biến đó, nên lệnh thành `/scripts/...` và chết (exit 127).
 Bộ cài tay của chính tác giả gặp đúng chuyện này và viết lại token trong mọi tệp `.md` nó chép
 (claude-seo: install.sh). Mục `chep` kiểu skill khai `thay`: danh sách `{"tu": <chuỗi>, "thanh":
 <chuỗi>}`, thay theo thứ tự, CHỈ trong tệp `.md` của skill thuộc mục đó (kể cả `.md` đi theo `kem`).
-Đích nên dùng `${CLAUDE_SKILL_DIR}`: Claude Code thay nó bằng thư mục của skill đang nạp, Javis
-làm y vậy ở `javis_use_skill`. Đây là ngoại lệ DUY NHẤT của luật "không sửa byte nào", nên mọi
+Đích nên dùng `${CLAUDE_SKILL_DIR}`: Claude Code thay nó bằng thư mục của skill đang nạp, Nixus
+làm y vậy ở `nixus_use_skill`. Đây là ngoại lệ DUY NHẤT của luật "không sửa byte nào", nên mọi
 cặp thay được ghi vào `docs/NGUON.md` cho người đọc gói thấy. Tệp mã không bao giờ bị thay.
 
 Khi nào cần người duyệt
@@ -71,7 +71,7 @@ Kho có luật mọi gói đều được đọc trước khi trộn. Đồng b�
 - Chỉ đổi tệp CHỮ (`.md`, `.txt`, ảnh, dữ liệu `.json`/`.yaml`): đẩy thẳng vào `main`. Repo đã
   được chủ kho chọn là đáng tin, và chữ hướng dẫn đổi là chuyện thường ngày của repo đó.
 - Có tệp MÃ đổi hay thêm (script, `.py`, `.js`, `.ts`...): mở Pull Request, chờ chủ kho đọc.
-  Javis không bao giờ thấy bản đó cho tới khi PR được trộn.
+  Nixus không bao giờ thấy bản đó cho tới khi PR được trộn.
 - Từ 10/11/2026 ba thứ mang đuôi chữ cũng tính là mã, vì chúng quyết định cái gì chạy trên máy người
   dùng: khối lệnh trong `.md` bị đổi (AI gõ đúng những dòng đó), `requirements*.txt` và `package.json`
   (script của skill tự cài theo), và tệp tên kiểu `README.py` (xem `can_duyet_tep`).
@@ -81,7 +81,7 @@ có trong dòng `cho_duyet=` (tệp này ghi vào `$GITHUB_OUTPUT`) lên nhánh 
 
 Luật chép, mặc định TỪ CHỐI
 ---------------------------
-Cùng trần với trình cài của Javis (`pack_install.py`), để gói đồng bộ xong luôn cài được:
+Cùng trần với trình cài của Nixus (`pack_install.py`), để gói đồng bộ xong luôn cài được:
 không liên kết mềm, không tên nhạy cảm (`.env`, khoá riêng), tối đa 500 tệp, 5 MB một tệp,
 40 MB cả gói. Vượt trần thì job đỏ và gói đứng yên ở bản cũ, không bao giờ phát hành nửa vời.
 """
@@ -104,7 +104,7 @@ CAU_HINH = GOC / "theo-goc"
 GOI = GOC / "packs"
 INDEX = GOC / "index.json"
 DIST = GOC / "dist"
-# Chỉ test đổi chỗ này (trỏ vào repo git trên đĩa). Javis và CI luôn lấy từ GitHub.
+# Chỉ test đổi chỗ này (trỏ vào repo git trên đĩa). Nixus và CI luôn lấy từ GitHub.
 GIT_GOC = os.environ.get("THEO_GOC_GIT_GOC") or "https://github.com/"
 
 _REPO_RE = re.compile(r"^[A-Za-z0-9_.-]{1,100}/[A-Za-z0-9_.-]{1,100}$")
@@ -116,13 +116,13 @@ _KHOA_RE = re.compile(r"^([A-Za-z_][A-Za-z0-9_-]*):(.*)$")
 # Gạch dài và gạch vừa (U+2014, U+2013) trong mô tả gốc: luật của chủ kho cấm chúng trong chữ
 # kho tự viết ra (danh mục, manifest). Thân agent của tác giả thì không đụng tới.
 _GACH_DAI = re.compile("\\s*[\u2014\u2013]\\s*")
-# Khoá frontmatter Javis tự đặt cho agent. Repo gốc có khoá trùng tên thì bỏ dòng gốc, khỏi trùng khoá.
-KHOA_JAVIS = ("type", "slug", "name", "role", "tags", "group", "ten_goc", "nguon")
+# Khoá frontmatter Nixus tự đặt cho agent. Repo gốc có khoá trùng tên thì bỏ dòng gốc, khỏi trùng khoá.
+KHOA_NIXUS = ("type", "slug", "name", "role", "tags", "group", "ten_goc", "nguon")
 BO_QUA = ("__pycache__", ".git", ".DS_Store", ".pytest_cache", "node_modules")
 TEN_CAM = (".env", "id_rsa", "id_dsa", "id_ecdsa", "id_ed25519")
 DUOI_CAM = (".pem", ".p12", ".pfx", ".key", ".ppk")
 # Đuôi coi là CHỮ: đổi chúng không cần người duyệt. Mọi đuôi khác coi là MÃ.
-# HTML và CSS tính là chữ: trong skill chúng là mẫu trang để AI dựng theo, không phải thứ Javis chạy.
+# HTML và CSS tính là chữ: trong skill chúng là mẫu trang để AI dựng theo, không phải thứ Nixus chạy.
 DUOI_CHU = (".md", ".txt", ".json", ".yaml", ".yml", ".geojson", ".csv", ".png", ".jpg", ".jpeg",
             ".webp", ".gif", ".svg", ".html", ".css", ".dot", ".ttf", ".otf", ".woff", ".woff2")
 TEN_CHU = ("LICENSE", "NOTICE", "README", "AUTHORS", "CHANGELOG")
@@ -200,7 +200,7 @@ def doc_cau_hinh(pid: str) -> dict:
             raise LoiDongBo(f"{pid}: `nhom_kho.{cat}` cần vi và en")
     if c.get("tach"):
         if not _TACH_RE.match(str(c["tach"])):
-            raise LoiDongBo(f"{pid}: `tach` phải là tiền tố id kết thúc bằng dấu chấm, ví dụ `javis.agency.`")
+            raise LoiDongBo(f"{pid}: `tach` phải là tiền tố id kết thúc bằng dấu chấm, ví dụ `nixus.agency.`")
         if not any(m["den"] == "agents" for m in chep):
             raise LoiDongBo(f"{pid}: `tach` chỉ dùng cho gói có agent")
     goi = c.get("goi") or {}
@@ -285,7 +285,7 @@ def dung_ban_moi(c: dict, nguon: Path, ra: Path, tt: dict = None, dich: dict = N
       thay     viết lại chuỗi trong tệp `.md` của skill mục này, như bộ cài tay của tác giả (đầu tệp);
       phang    repo để skill thành tệp `.md` phẳng (`skills/fk-x.md`, như FlowKit) thay vì thư mục có
                SKILL.md: mỗi tệp `.md` trừ README là một skill, tên theo tên tệp, chép NGUYÊN VĂN
-               thành `<tên>/SKILL.md`. Tệp không có frontmatter thì Javis lấy dòng đầu làm mô tả."""
+               thành `<tên>/SKILL.md`. Tệp không có frontmatter thì Nixus lấy dòng đầu làm mô tả."""
     skills, tu_dau = [], {}
     tt = {} if tt is None else tt
     for m in c["chep"]:
@@ -413,7 +413,7 @@ def _chep_agents(c, m, tu, nguon, ra, ten_da_co, tu_dau, tt, dich) -> None:
         if ten in ten_da_co:
             raise LoiDongBo(f"hai mục trùng tên: {ten}")
         rel = f.relative_to(nguon).as_posix()
-        van_ban, thong_tin = _agent_javis(f.read_text(encoding="utf-8"), ten, c, m, dich.get(f.stem), rel)
+        van_ban, thong_tin = _agent_nixus(f.read_text(encoding="utf-8"), ten, c, m, dich.get(f.stem), rel)
         (ra / "agents").mkdir(parents=True, exist_ok=True)
         (ra / "agents" / f"{ten}.md").write_text(van_ban, encoding="utf-8")
         ten_da_co.append(ten)
@@ -451,15 +451,15 @@ def _bo_gach(s: str) -> str:
 
 
 def _cat(s: str, tran: int) -> str:
-    """Cắt ở ranh giới từ, kèm dấu ba chấm. Javis cắt tên ở 120 và mô tả ở 300 ký tự (`packs_store`)."""
+    """Cắt ở ranh giới từ, kèm dấu ba chấm. Nixus cắt tên ở 120 và mô tả ở 300 ký tự (`packs_store`)."""
     s = " ".join((s or "").split())
     if len(s) <= tran:
         return s
     return s[:tran - 3].rsplit(" ", 1)[0].rstrip(",;: ") + "..."
 
 
-def _agent_javis(van_ban: str, ten: str, c: dict, m: dict, vi, rel: str):
-    """Tệp agent cho Javis: frontmatter thêm khoá của Javis, THÂN GIỮ NGUYÊN TỪNG BYTE.
+def _agent_nixus(van_ban: str, ten: str, c: dict, m: dict, vi, rel: str):
+    """Tệp agent cho Nixus: frontmatter thêm khoá của Nixus, THÂN GIỮ NGUYÊN TỪNG BYTE.
 
     Trả (văn bản, thông tin). `vi` là [tên, mô tả] tiếng Việt từ bảng dịch, hoặc None."""
     mo = re.match(r"---\r?\n(.*?)\r?\n---[ \t]*(\r?\n|$)", van_ban, re.S)
@@ -478,7 +478,7 @@ def _agent_javis(van_ban: str, ten: str, c: dict, m: dict, vi, rel: str):
     dau += [f"- {_q(x)}" for x in the]
     dau += [f"group: {_q(m['nhan']['vi'])}", f"ten_goc: {_q(ten_goc)}", f"nguon: {_q(c['repo'] + '/' + rel)}"]
     for k, d in khoi:
-        if k not in KHOA_JAVIS:
+        if k not in KHOA_NIXUS:
             dau += d
     van_ban_moi = "\n".join(dau + ["---"]) + "\n" + van_ban[mo.end():]
     return van_ban_moi, {"ten_vi": ten_vi, "ten_en": _cat(_bo_gach(ten_goc), 120),
@@ -503,11 +503,11 @@ def _nguon_md(c: dict, tu_dau: dict, tt: dict = None) -> str:
     if any(v.get("den") == "agents" for v in (tt or {}).values()):
         dong = [f"# Nguồn của gói theo repo gốc `{c['repo']}`", "",
                 f"Agent trong gói này lấy từ [{c['repo']}]({url}), nhánh `{c['ref']}`. Thân prompt",
-                "chép **nguyên văn**: không dịch, không rút gọn. Phần đầu mỗi tệp thêm vài khoá để Javis",
+                "chép **nguyên văn**: không dịch, không rút gọn. Phần đầu mỗi tệp thêm vài khoá để Nixus",
                 "đọc được (`type`, `slug`, `name` và `role` tiếng Việt, `tags`, `group`); tên gốc nằm ở",
                 "`ten_goc`, các khoá gốc khác giữ nguyên.", "",
                 "Mỗi ngày kho so lại với repo gốc (`tools/theo-goc.py`). Repo gốc đổi thì gói lên một bản",
-                "vá, Javis báo trong chuông và bạn bấm Cập nhật. Agent bạn đã tự sửa thì Javis giữ lại,",
+                "vá, Nixus báo trong chuông và bạn bấm Cập nhật. Agent bạn đã tự sửa thì Nixus giữ lại,",
                 "không ghi đè. Commit gốc của bản đang phát hành nằm ở trường `upstream.commit` trong",
                 "`index.json`.", "",
                 f"Giấy phép gốc: **{c['goi']['license']}**, nguyên văn ở `docs/LICENSE-goc*` nếu repo có.", "",
@@ -519,7 +519,7 @@ def _nguon_md(c: dict, tu_dau: dict, tt: dict = None) -> str:
             f"Skill trong gói này chép **nguyên văn** từ [{c['repo']}]({url}), nhánh `{c['ref']}`:",
             "không dịch, không rút gọn, không sửa frontmatter.", "",
             "Mỗi ngày kho so lại với repo gốc (`tools/theo-goc.py`). Repo gốc đổi thì gói lên một bản",
-            "vá, Javis báo trong chuông và bạn bấm Cập nhật. Skill bạn đã tự sửa thì Javis giữ lại,",
+            "vá, Nixus báo trong chuông và bạn bấm Cập nhật. Skill bạn đã tự sửa thì Nixus giữ lại,",
             "không ghi đè. Commit gốc của bản đang phát hành nằm ở trường `upstream.commit` trong",
             "`index.json`.", "",
             f"Giấy phép gốc: **{c['goi']['license']}**, nguyên văn ở `docs/LICENSE-goc*` nếu repo có.", "",
@@ -533,7 +533,7 @@ def _nguon_md(c: dict, tu_dau: dict, tt: dict = None) -> str:
         dong += [f"| `skills/{k['vao']}` | `{k['tu']}` |" for k in kem]
     thay = [t for m in c["chep"] for t in m.get("thay") or []]
     if thay:
-        dong += ["", "Chữ duy nhất gói viết lại, trong tệp `.md` (giống bộ cài tay của tác giả). Javis không đặt",
+        dong += ["", "Chữ duy nhất gói viết lại, trong tệp `.md` (giống bộ cài tay của tác giả). Nixus không đặt",
                  "`CLAUDE_PLUGIN_ROOT` như plugin Claude Code, còn `CLAUDE_SKILL_DIR` là thư mục skill đang nạp:", "",
                  "| Gốc | Trong gói |", "|---|---|"]
         dong += [f"| `{t['tu']}` | `{t['thanh']}` |" for t in thay]
@@ -555,7 +555,7 @@ def _cay(goc: Path, phan: list) -> dict:
 
 def _ban_cu(thu_muc: Path) -> str:
     try:
-        for dong in (thu_muc / "javis-pack.yaml").read_text(encoding="utf-8").splitlines():
+        for dong in (thu_muc / "nixus-pack.yaml").read_text(encoding="utf-8").splitlines():
             if dong.startswith("version:"):
                 return dong.split(":", 1)[1].strip().strip('"')
     except OSError:
@@ -587,7 +587,7 @@ def viet_manifest(pid: str, c: dict, ban: str, skills: list, tt: dict = None) ->
     loai = _theo_loai(skills, tt)
     if set(loai) != {"skills"}:
         return "\n".join([
-            "format: javis-pack", "spec: 1", f"id: {pid}", f"version: {ban}",
+            "format: nixus-pack", "spec: 1", f"id: {pid}", f"version: {ban}",
             f"name: {{vi: {_q(g['name']['vi'])}, en: {_q(g['name']['en'])}}}",
             f"description: {{vi: {_q(g['description']['vi'])},",
             f"              en: {_q(g['description']['en'])}}}",
@@ -601,7 +601,7 @@ def viet_manifest(pid: str, c: dict, ban: str, skills: list, tt: dict = None) ->
             "provides:",
         ] + [f"  {k}: [{', '.join(v)}]" for k, v in loai.items()] + [""])
     return "\n".join([
-        "format: javis-pack",
+        "format: nixus-pack",
         "spec: 1",
         f"id: {pid}",
         f"version: {ban}",
@@ -621,7 +621,7 @@ def viet_manifest(pid: str, c: dict, ban: str, skills: list, tt: dict = None) ->
 
 
 def _tier(thu_muc: Path) -> str:
-    """Cùng luật với `packs._tier` bên Javis: có tệp .py là bậc code."""
+    """Cùng luật với `packs._tier` bên Nixus: có tệp .py là bậc code."""
     return "code" if any(thu_muc.rglob("*.py")) else "data"
 
 
@@ -651,7 +651,7 @@ def ghi_index(pid: str, c: dict, ban: str, skills: list, commit: str, zip_: Path
         "tier": _tier(GOI / pid),
         "verified": True,
         "updated": hom_nay,
-        "homepage": f"https://github.com/blogminhquy/javis-store/tree/main/packs/{pid}",
+        "homepage": f"https://github.com/duyanhehe/nixus-store/tree/main/packs/{pid}",
         "source": "https://github.com/" + c["repo"],
         "license": g["license"],
         "upstream": {"repo": c["repo"], "ref": c["ref"], "commit": commit, "synced": hom_nay},
@@ -732,7 +732,7 @@ def dong_bo(pid: str, chi_kiem: bool = False, hom_nay: str = "", bo_qua_ma: bool
         tt = {}
         skills = dung_ban_moi(c, tmp / "goc", tmp / "moi", tt, _doc_dich(pid))
         cu, moi = _cay(thu_muc, phan), _cay(tmp / "moi", phan)
-        if cu == moi and (thu_muc / "javis-pack.yaml").is_file():
+        if cu == moi and (thu_muc / "nixus-pack.yaml").is_file():
             # Gói gộp đứng yên nhưng gói lẻ vẫn soát: lần đầu bật `tach`, hay ai đó xoá nhầm một gói lẻ.
             so_tach = _dong_bo_tach(pid, c, tmp / "moi", tt, hom_nay) if c.get("tach") and not chi_kiem else 0
             if not so_tach:
@@ -751,7 +751,7 @@ def dong_bo(pid: str, chi_kiem: bool = False, hom_nay: str = "", bo_qua_ma: bool
             shutil.rmtree(thu_muc / ten, ignore_errors=True)
             if (tmp / "moi" / ten).is_dir():
                 shutil.copytree(tmp / "moi" / ten, thu_muc / ten)
-        (thu_muc / "javis-pack.yaml").write_text(viet_manifest(pid, c, ban, skills, tt), encoding="utf-8")
+        (thu_muc / "nixus-pack.yaml").write_text(viet_manifest(pid, c, ban, skills, tt), encoding="utf-8")
         zip_ = _dong_goi(pid)
         ghi_index(pid, c, ban, skills, commit, zip_, hom_nay, tt)
         if c.get("tach"):
@@ -766,7 +766,7 @@ def _id_tach(c: dict, ten: str) -> str:
 def _manifest_tach(cid: str, pid: str, c: dict, ten: str, info: dict, ban: str) -> str:
     g = c["goi"]
     return "\n".join([
-        "format: javis-pack", "spec: 1", f"id: {cid}", f"version: {ban}",
+        "format: nixus-pack", "spec: 1", f"id: {cid}", f"version: {ban}",
         f"name: {{vi: {_q(info['ten_vi'])}, en: {_q(info['ten_en'])}}}",
         f"description: {{vi: {_q(info['mo_ta_vi'])},",
         f"              en: {_q(info['mo_ta_en'])}}}",
@@ -812,12 +812,12 @@ def _dong_bo_tach(pid: str, c: dict, moi: Path, tt: dict, hom_nay: str) -> int:
             (t / "docs" / "NGUON.md").write_text(
                 f"# Nguồn của agent `{ten}`\n\n"
                 f"Một agent lẻ của gói `{pid}`, lấy từ [{c['repo']}/{info['tu']}]({_url_tep(c, info['tu'])}).\n"
-                "Thân prompt chép nguyên văn, phần đầu tệp thêm khoá cho Javis (xem `docs/NGUON.md` của gói gộp).\n"
-                "Repo gốc đổi agent này thì gói lên một bản vá, Javis báo trong chuông.\n\n"
+                "Thân prompt chép nguyên văn, phần đầu tệp thêm khoá cho Nixus (xem `docs/NGUON.md` của gói gộp).\n"
+                "Repo gốc đổi agent này thì gói lên một bản vá, Nixus báo trong chuông.\n\n"
                 f"Giấy phép gốc: **{c['goi']['license']}**, nguyên văn ở `docs/LICENSE-goc*`.\n", encoding="utf-8")
             ban_cu = _ban_cu(tm)
             giong = (bool(ban_cu) and cid in cu_muc and _cay(tm, ["agents", "docs"]) == _cay(t, ["agents", "docs"])
-                     and (tm / "javis-pack.yaml").read_text(encoding="utf-8")
+                     and (tm / "nixus-pack.yaml").read_text(encoding="utf-8")
                      == _manifest_tach(cid, pid, c, ten, info, ban_cu))
             if giong:
                 muc_moi[cid] = cu_muc[cid]
@@ -827,7 +827,7 @@ def _dong_bo_tach(pid: str, c: dict, moi: Path, tt: dict, hom_nay: str) -> int:
             for p in ("agents", "docs"):
                 shutil.rmtree(tm / p, ignore_errors=True)
                 shutil.copytree(t / p, tm / p)
-        (tm / "javis-pack.yaml").write_text(_manifest_tach(cid, pid, c, ten, info, ban), encoding="utf-8")
+        (tm / "nixus-pack.yaml").write_text(_manifest_tach(cid, pid, c, ten, info, ban), encoding="utf-8")
         with contextlib.redirect_stdout(io.StringIO()):
             zip_ = _dong_goi(cid)
         b = zip_.read_bytes()
@@ -844,7 +844,7 @@ def _dong_bo_tach(pid: str, c: dict, moi: Path, tt: dict, hom_nay: str) -> int:
             "tier": "data",
             "verified": True,
             "updated": hom_nay,
-            "homepage": f"https://github.com/blogminhquy/javis-store/tree/main/packs/{cid}",
+            "homepage": f"https://github.com/duyanhehe/nixus-store/tree/main/packs/{cid}",
             "source": _url_tep(c, info["tu"]),
             "license": g["license"],
             "thuoc_goi": pid,

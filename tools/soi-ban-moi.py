@@ -1,6 +1,6 @@
 """Chạy thử BẢN MỚI NHẤT của từng MCP bên thứ 3 và soi tên tool thật nó trả về.
 
-    JAVIS_OS_DIR=../javis-os python tools/soi-ban-moi.py
+    NIXUS_OS_DIR=../nixusai python tools/soi-ban-moi.py
 
 Cần mạng, `npx` và `uvx`. CI chạy mỗi ngày (xem `.github/workflows/kiem-tra.yml`).
 
@@ -8,15 +8,15 @@ Vì sao có script này
 --------------------
 Từ 2026-10-05 connector chạy MCP bên thứ 3 đi theo bản chính thức mới nhất (`@latest`, xem
 `ban_chinh_thuc.py`). Cái giá: bên thứ 3 ra bản mới là mọi máy chạy bản đó ngay, kể cả khi bản
-đó thêm tool mới mà khuôn chưa phân loại. Và `mcp_catalog.classify` của Javis xếp một tool
+đó thêm tool mới mà khuôn chưa phân loại. Và `mcp_catalog.classify` của Nixus xếp một tool
 KHÔNG khai, tên không chứa từ gợi ý ghi nào, vào nhóm ĐỌC, tức chạy được ở mức Chỉ đọc. Vụ có
-thật lúc viết script: `workspace-mcp` 2.x thêm `run_script_function` (chạy Apps Script) và Javis
+thật lúc viết script: `workspace-mcp` 2.x thêm `run_script_function` (chạy Apps Script) và Nixus
 xếp nó vào nhóm đọc.
 
 `kiem-tra.py` chỉ soi được tên tool mà khuôn KHAI. Script này soi tên tool mà bản mới nhất THẬT
-SỰ có, phân loại bằng đúng hàm `classify` của Javis, rồi áp cùng bộ luật tên (`luat_ten_tool.py`):
+SỰ có, phân loại bằng đúng hàm `classify` của Nixus, rồi áp cùng bộ luật tên (`luat_ten_tool.py`):
 
-- ĐỎ: tool nghe như đụng tiền, hoặc phá huỷ / tác động ra ngoài, mà Javis không xếp vào nhóm
+- ĐỎ: tool nghe như đụng tiền, hoặc phá huỷ / tác động ra ngoài, mà Nixus không xếp vào nhóm
   nguy hiểm (trừ khi khuôn liệt kê nó trong `ghi_da_can_nhac`). Sửa bằng cách khai nó trong
   `tool_meta` của khuôn rồi ra bản gói mới.
 - Cảnh báo: MCP không khởi động được khi thiếu tài khoản đăng nhập (vài server đòi credential
@@ -51,11 +51,11 @@ TRAN_GIAY = 180   # lần đầu npx/uvx phải tải gói, nên rộng tay
 
 
 def _nap_classify():
-    os_dir = Path(os.environ.get("JAVIS_OS_DIR") or GOC.parent / "javis-os").resolve()
+    os_dir = Path(os.environ.get("NIXUS_OS_DIR") or GOC.parent / "nixusai").resolve()
     server = os_dir / "server"
     if not (server / "mcp_catalog.py").is_file():
-        sys.exit(f"không thấy Javis OS ở {os_dir}: đặt JAVIS_OS_DIR trỏ tới bản checkout javis-os")
-    os.environ.setdefault("JAVIS_STATE_DIR", tempfile.mkdtemp(prefix="javis-soi-"))
+        sys.exit(f"không thấy Nixus AI ở {os_dir}: đặt NIXUS_OS_DIR trỏ tới bản checkout nixusai")
+    os.environ.setdefault("NIXUS_STATE_DIR", tempfile.mkdtemp(prefix="nixus-soi-"))
     sys.path.insert(0, str(server))
     import mcp_catalog
     return mcp_catalog.classify
@@ -63,7 +63,7 @@ def _nap_classify():
 
 # Service account GIẢ, đúng hình dạng nhưng khoá rỗng: đủ để vài server chịu khởi động và liệt
 # kê tool, không bao giờ đăng nhập được vào đâu.
-_SA_GIA = ('{"type": "service_account", "project_id": "javis-soi", "private_key_id": "x", '
+_SA_GIA = ('{"type": "service_account", "project_id": "nixus-soi", "private_key_id": "x", '
            '"private_key": "-----BEGIN PRIVATE KEY-----\\nMIIB\\n-----END PRIVATE KEY-----\\n", '
            '"client_email": "soi@javis-soi.iam.gserviceaccount.com", "client_id": "1", '
            '"token_uri": "https://oauth2.googleapis.com/token"}')
@@ -83,9 +83,15 @@ def _env_gia(con, thu_muc):
             env[ten] = str(tep)
         elif ten.upper().endswith("_URL"):
             # Vài server kiểm định dạng URL ngay lúc mở (Sapo: SAPO_STORE_URL).
-            env[ten] = "https://javis-soi-gia.invalid"
+            env[ten] = "https://nixus-soi-gia.invalid"
         else:
-            env[ten] = "javis-soi-gia"
+            env[ten] = "nixus-soi-gia"
+    # `oauth_env` (Tag Manager của Stape): Nixus đưa đăng nhập Google vào biến sau khi người dùng đăng nhập. Server
+    # đó thoát ngay khi thiếu biến, nên giả luôn chúng. Refresh token giả chỉ được đổi lúc gọi tool, mà soi thì không
+    # gọi tool nào.
+    for ten in (con.get("oauth_env") or {}).values():
+        if isinstance(ten, str) and ten.strip():
+            env[ten.strip()] = "nixus-soi-gia"
     return env
 
 
@@ -98,7 +104,7 @@ def liet_ke_tool(con):
             for a in con.get("args") or []]
     p = subprocess.Popen([cmd] + args, stdin=subprocess.PIPE,
                          stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True,
-                         env=_env_gia(con, tempfile.mkdtemp(prefix="javis-soi-env-")))
+                         env=_env_gia(con, tempfile.mkdtemp(prefix="nixus-soi-env-")))
     loi = []
     threading.Thread(target=lambda: loi.append(p.stderr.read()), daemon=True).start()
     hen = threading.Timer(TRAN_GIAY, p.kill)
@@ -124,7 +130,7 @@ def liet_ke_tool(con):
 
         gui({"jsonrpc": "2.0", "id": 1, "method": "initialize",
              "params": {"protocolVersion": "2025-06-18", "capabilities": {},
-                        "clientInfo": {"name": "javis-store-soi", "version": "1"}}})
+                        "clientInfo": {"name": "nixus-store-soi", "version": "1"}}})
         m, e = nhan(1)
         if not m:
             return None, e
@@ -154,7 +160,7 @@ def soi_ten(classify, con, nhan_goi, ten, nhan=None):
 
     `nhan`: {tên: nhãn} do bên chính chủ gắn (xem `chinh_chu.py`), nếu có. Nhãn đó mạnh hơn mọi
     luật tên: vụ có thật lúc viết là `hide_issue_comment` của GitHub, tên không chứa từ ghi nào
-    nên Javis xếp vào nhóm đọc, trong khi chính GitHub ghi rõ nó không chỉ đọc."""
+    nên Nixus xếp vào nhóm đọc, trong khi chính GitHub ghi rõ nó không chỉ đọc."""
     meta = con.get("tool_meta") or {}
     da_can_nhac = {str(x) for x in (con.get("ghi_da_can_nhac") or [])}
     khai = [str(p).lower() for k in ("read", "write", "danger") for p in (meta.get(k) or [])]
@@ -168,14 +174,14 @@ def soi_ten(classify, con, nhan_goi, ten, nhan=None):
             continue
         cua_ho = (nhan or {}).get(t, "?")
         if _khop(t, TIEN):
-            do.append(f"{nhan_goi}: tool '{t}' đụng tới TIỀN mà Javis xếp vào nhóm {nhom}")
+            do.append(f"{nhan_goi}: tool '{t}' đụng tới TIỀN mà Nixus xếp vào nhóm {nhom}")
         elif cua_ho in ("write", "destructive") and nhom == "read":
-            do.append(f"{nhan_goi}: tool '{t}' được bên chính chủ ghi là KHÔNG chỉ đọc mà Javis xếp "
+            do.append(f"{nhan_goi}: tool '{t}' được bên chính chủ ghi là KHÔNG chỉ đọc mà Nixus xếp "
                       f"vào nhóm đọc, tức chạy được ở mức Chỉ đọc. Khai nó trong tool_meta")
         elif (cua_ho == "destructive" or _khop(t, PHA)) and t not in da_can_nhac:
             ly_do = ("được bên chính chủ ghi là có thể PHÁ HUỶ" if cua_ho == "destructive"
                      else "nghe như phá huỷ hay tác động ra ngoài")
-            do.append(f"{nhan_goi}: tool '{t}' {ly_do} mà Javis xếp vào nhóm {nhom}. Khai nó là "
+            do.append(f"{nhan_goi}: tool '{t}' {ly_do} mà Nixus xếp vào nhóm {nhom}. Khai nó là "
                       f"danger trong tool_meta, hoặc thêm vào `ghi_da_can_nhac` nếu đã cân nhắc "
                       f"và thấy nó nhẹ")
         elif nhom == "read" and not any(fnmatch(t.lower(), p) for p in khai):

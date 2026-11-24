@@ -1,0 +1,14 @@
+format: nixus-pack
+spec: 1
+id: nixus.haravan
+version: 1.0.2
+replaces:
+  - javis.haravan
+name: {vi: "Haravan"}
+description: {vi: "Đơn hàng, sản phẩm, khách hàng, tồn kho và báo cáo doanh thu, phân nhóm khách, gợi ý nhập hàng từ Haravan. Tạo một ứng dụng riêng trong Haravan, dán Access Token là xong."}
+author: {name: Nixus}
+license: MIT
+homepage: "https://github.com/duyanhehe/nixus-store"
+compat: {app: ">=0.55.27"}
+provides:
+  connectors: [connectors/haravan.json]

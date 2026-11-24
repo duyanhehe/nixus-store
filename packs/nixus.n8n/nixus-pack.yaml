@@ -1,0 +1,14 @@
+format: nixus-pack
+spec: 1
+id: nixus.n8n
+version: 1.0.3
+replaces:
+  - javis.n8n
+name: {vi: "n8n"}
+description: {vi: "Điều khiển n8n của bạn: tìm và đọc workflow, xem lịch sử chạy, tạo và sửa workflow, chạy workflow - qua MCP chính chủ của n8n. Cần địa chỉ n8n của bạn + MCP Access Token."}
+author: {name: Nixus}
+license: MIT
+homepage: "https://github.com/duyanhehe/nixus-store"
+compat: {app: ">=0.55.27"}
+provides:
+  connectors: [connectors/n8n.json]

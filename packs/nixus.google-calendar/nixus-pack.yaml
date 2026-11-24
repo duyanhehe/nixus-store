@@ -1,0 +1,14 @@
+format: nixus-pack
+spec: 1
+id: nixus.google-calendar
+version: 1.0.1
+replaces:
+  - javis.google-calendar
+name: {vi: "Google Calendar"}
+description: {vi: "Lịch Google qua MCP chính chủ của Google: xem lịch, tìm chỗ trống, tạo/sửa sự kiện, nhắc hẹn. Đăng nhập Google trong dashboard, chạy được cả trên VPS. Cần tạo OAuth client + ghi danh Developer Preview của Google 1 lần (~10 phút)."}
+author: {name: Nixus}
+license: MIT
+homepage: "https://github.com/duyanhehe/nixus-store"
+compat: {app: ">=0.55.27"}
+provides:
+  connectors: [connectors/google-calendar.json]

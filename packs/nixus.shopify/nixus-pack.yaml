@@ -1,0 +1,14 @@
+format: nixus-pack
+spec: 1
+id: nixus.shopify
+version: 1.0.3
+replaces:
+  - javis.shopify
+name: {vi: "Shopify"}
+description: {vi: "Tra cứu sản phẩm, giá, tồn kho và dựng sẵn giỏ hàng của MỘT cửa hàng Shopify qua MCP chính chủ (chuẩn UCP). Không cần API key, không cần cài app, không cần là chủ shop - chỉ cần địa chỉ cửa hàng."}
+author: {name: Nixus}
+license: MIT
+homepage: "https://github.com/duyanhehe/nixus-store"
+compat: {app: ">=0.55.27"}
+provides:
+  connectors: [connectors/shopify.json]

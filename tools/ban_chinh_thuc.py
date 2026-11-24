@@ -12,7 +12,7 @@ Vì sao phải ghi rõ `@latest` mà không để trống phiên bản: cả `np
 lần khởi động, nên mọi máy chạy cùng một bản.
 
 Ngoại lệ có tên: khuôn khai `ngoai_le_ban_chinh_thuc` là một câu nói rõ VÌ SAO (bên thứ 3 chưa có
-bản phát hành nào, hay code của Javis đọc thẳng định dạng của một bản cụ thể). Javis không đọc
+bản phát hành nào, hay code của Nixus đọc thẳng định dạng của một bản cụ thể). Nixus không đọc
 trường này; nó để quyết định ấy nằm trong dữ liệu cho người review đọc được.
 
 Không chạm mạng. Đây chỉ soi lệnh; `soi-ban-moi.py` mới là chỗ chạy thử bản mới nhất thật.

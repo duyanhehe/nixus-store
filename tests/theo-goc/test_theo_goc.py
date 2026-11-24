@@ -7,7 +7,7 @@ lên bản vá và không cần duyệt; đổi script thì lên bản vá và c
 commit chỉ đụng phần ngoài
 skill thì không ra bản; liên kết mềm hay tên nhạy cảm thì từ chối và gói đứng yên; skill dạng tệp `.md`
 phẳng (`phang`) chép nguyên văn thành `<tên>/SKILL.md`. Gói agent (`den: agents`): thân giữ nguyên byte,
-phần đầu thêm khoá Javis, bảng dịch, và gói lẻ (`tach`) thêm, lên bản, rời danh mục theo repo gốc.
+phần đầu thêm khoá Nixus, bảng dịch, và gói lẻ (`tach`) thêm, lên bản, rời danh mục theo repo gốc.
 """
 import importlib.util
 import json
@@ -52,8 +52,8 @@ class TheoGoc(unittest.TestCase):
         for d in ("theo-goc", "packs", "dist"):
             (self.kho / d).mkdir(parents=True)
         (self.kho / "index.json").write_text(json.dumps(
-            {"format": "javis-pack-index", "format_version": 1, "updated": "", "packs": []}), encoding="utf-8")
-        (self.kho / "theo-goc" / "javis.thu.json").write_text(json.dumps({
+            {"format": "nixus-pack-index", "format_version": 1, "updated": "", "packs": []}), encoding="utf-8")
+        (self.kho / "theo-goc" / "nixus.thu.json").write_text(json.dumps({
             "repo": "tac-gia/kho-skill", "ref": "main",
             "chep": [{"tu": "skills", "den": "skills"}],
             "goi": {"name": {"vi": "Thư", "en": "Letters"}, "description": {"vi": "a", "en": "a"},
@@ -77,10 +77,10 @@ class TheoGoc(unittest.TestCase):
 
     def muc(self):
         d = json.loads((self.kho / "index.json").read_text(encoding="utf-8"))
-        return next(x for x in d["packs"] if x["id"] == "javis.thu")
+        return next(x for x in d["packs"] if x["id"] == "nixus.thu")
 
     def dong_bo(self):
-        return self.tg.dong_bo("javis.thu", hom_nay="2026-10-28")
+        return self.tg.dong_bo("nixus.thu", hom_nay="2026-10-28")
 
     def test_lan_dau_dung_goi(self):
         kq = self.dong_bo()
@@ -90,13 +90,13 @@ class TheoGoc(unittest.TestCase):
         self.assertEqual(m["upstream"]["repo"], "tac-gia/kho-skill")
         self.assertEqual(len(m["upstream"]["commit"]), 40)
         self.assertEqual(m["provides"]["skills"], ["viet-thu"])
-        goi = self.kho / "packs" / "javis.thu"
+        goi = self.kho / "packs" / "nixus.thu"
         self.assertEqual((goi / "skills" / "viet-thu" / "SKILL.md").read_bytes(),
                          (self.up / "skills" / "viet-thu" / "SKILL.md").read_bytes(), "phải chép nguyên văn")
         self.assertTrue((goi / "docs" / "LICENSE-goc.txt").is_file())
         with zipfile.ZipFile(self.kho / m["download"]["url"]) as z:
             self.assertIn("skills/viet-thu/SKILL.md", z.namelist())
-            self.assertIn("javis-pack.yaml", z.namelist())
+            self.assertIn("nixus-pack.yaml", z.namelist())
 
     def test_khong_doi_thi_khong_ra_ban(self):
         self.dong_bo()
@@ -174,10 +174,10 @@ class TheoGoc(unittest.TestCase):
         self.dong_bo()
         (self.up / "skills" / "viet-thu" / "chay.sh").write_text("echo 3\n", encoding="utf-8")
         self.commit("sửa script")
-        kq = self.tg.dong_bo("javis.thu", hom_nay="2026-10-28", bo_qua_ma=True)
+        kq = self.tg.dong_bo("nixus.thu", hom_nay="2026-10-28", bo_qua_ma=True)
         self.assertTrue(kq["doi"] and kq["can_duyet"] and not kq["ghi"])
         self.assertEqual(self.muc()["version"], "1.0.0", "lượt --khong-ma không ghi gói có tệp mã đổi")
-        self.assertEqual((self.kho / "packs" / "javis.thu" / "skills" / "viet-thu" / "chay.sh").read_text(), "echo 1\n")
+        self.assertEqual((self.kho / "packs" / "nixus.thu" / "skills" / "viet-thu" / "chay.sh").read_text(), "echo 1\n")
 
     def test_tu_choi_lien_ket_mem_va_ten_nhay_cam(self):
         self.dong_bo()
@@ -193,7 +193,7 @@ class TheoGoc(unittest.TestCase):
             self.commit("bỏ " + ten)
 
     def cau_hinh(self, chep):
-        p = self.kho / "theo-goc" / "javis.thu.json"
+        p = self.kho / "theo-goc" / "nixus.thu.json"
         c = json.loads(p.read_text(encoding="utf-8"))
         c["chep"] = chep
         p.write_text(json.dumps(c), encoding="utf-8")
@@ -206,7 +206,7 @@ class TheoGoc(unittest.TestCase):
         self.cau_hinh([{"tu": "skills", "den": "skills", "bo": ["noi-bo", "ban-quyen"],
                         "doi_ten": {"viet-thu": "tg-viet-thu"}}])
         self.dong_bo()
-        goi = self.kho / "packs" / "javis.thu" / "skills"
+        goi = self.kho / "packs" / "nixus.thu" / "skills"
         self.assertEqual(sorted(p.name for p in goi.iterdir()), ["tg-viet-thu"])
         self.assertEqual((goi / "tg-viet-thu" / "SKILL.md").read_bytes(),
                          (self.up / "skills" / "viet-thu" / "SKILL.md").read_bytes(), "đổi tên thư mục, nội dung giữ nguyên")
@@ -229,7 +229,7 @@ class TheoGoc(unittest.TestCase):
         self.commit("skill ở gốc")
         self.cau_hinh([{"tu": ".", "den": "skills", "ten": "goc", "bo_tep": ["tests", "skills"]}])
         self.dong_bo()
-        goi = self.kho / "packs" / "javis.thu" / "skills" / "goc"
+        goi = self.kho / "packs" / "nixus.thu" / "skills" / "goc"
         co = sorted(p.relative_to(goi).as_posix() for p in goi.rglob("*") if p.is_file())
         self.assertEqual(co, ["LICENSE", "README.md", "SKILL.md", "helpers/a.py"])
         self.assertEqual(self.muc()["tier"], "code", "có tệp .py thì gói là bậc code")
@@ -250,7 +250,7 @@ class TheoGoc(unittest.TestCase):
                            {"tu": "requirements.txt", "vao": "viet-thu/requirements.txt"},
                            {"tu": ".claude-plugin/plugin.json", "vao": "viet-thu/.claude-plugin/plugin.json"}])
         self.dong_bo()
-        goi = self.kho / "packs" / "javis.thu" / "skills" / "viet-thu"
+        goi = self.kho / "packs" / "nixus.thu" / "skills" / "viet-thu"
         co = sorted(p.relative_to(goi).as_posix() for p in goi.rglob("*") if p.is_file())
         self.assertEqual(co, [".claude-plugin/plugin.json", "SKILL.md", "chay.sh", "requirements.txt",
                               "scripts/chay", "scripts/sub/a.py"])
@@ -258,7 +258,7 @@ class TheoGoc(unittest.TestCase):
                          (self.up / "scripts" / "sub" / "a.py").read_bytes(), "phải chép nguyên văn")
         self.assertEqual(self.muc()["provides"]["skills"], ["viet-thu"], "tệp kèm không thành skill")
         self.assertIn("`skills/viet-thu/scripts` | `scripts`",
-                      (self.kho / "packs" / "javis.thu" / "docs" / "NGUON.md").read_text(encoding="utf-8"))
+                      (self.kho / "packs" / "nixus.thu" / "docs" / "NGUON.md").read_text(encoding="utf-8"))
         (self.up / "scripts" / "sub" / "a.py").write_text("print(2)\n", encoding="utf-8")
         self.commit("sửa script dùng chung")
         kq = self.dong_bo()
@@ -282,7 +282,7 @@ class TheoGoc(unittest.TestCase):
                 self.dong_bo()
 
     def test_thay_bien_chi_plugin_moi_co(self):
-        # Review PR #53: skill gọi "${CLAUDE_PLUGIN_ROOT}/scripts/chay", Javis không đặt biến đó nên lệnh
+        # Review PR #53: skill gọi "${CLAUDE_PLUGIN_ROOT}/scripts/chay", Nixus không đặt biến đó nên lệnh
         # thành /scripts/chay (exit 127). `thay` viết lại như bộ cài tay của tác giả, chỉ trong `.md`.
         lenh = '"${CLAUDE_PLUGIN_ROOT}/scripts/chay" run x.py'
         (self.up / "skills" / "viet-thu" / "SKILL.md").write_bytes(
@@ -304,7 +304,7 @@ class TheoGoc(unittest.TestCase):
                         "thay": thay}])
         kq = self.dong_bo()
         self.assertTrue(kq["doi"])
-        goi = self.kho / "packs" / "javis.thu" / "skills"
+        goi = self.kho / "packs" / "nixus.thu" / "skills"
         skill = (goi / "viet-thu" / "SKILL.md").read_bytes()
         self.assertIn(b'"${CLAUDE_SKILL_DIR}/../viet-thu/scripts/chay" run x.py', skill)
         self.assertIn(b"\r\n---\r\n", skill, "chỉ thay đúng chuỗi, giữ nguyên CRLF")
@@ -314,13 +314,13 @@ class TheoGoc(unittest.TestCase):
         self.assertIn("${CLAUDE_SKILL_DIR}/../viet-thu/SKILL.md",
                       (goi / "doc-thu" / "SKILL.md").read_text(encoding="utf-8"))
         self.assertIn(lenh, (goi / "viet-thu" / "chay.sh").read_text(encoding="utf-8"), "tệp mã không bao giờ bị thay")
-        # Lệnh đã viết lại chạy được từ thư mục skill khác, khi không có CLAUDE_PLUGIN_ROOT (đúng như Javis).
+        # Lệnh đã viết lại chạy được từ thư mục skill khác, khi không có CLAUDE_PLUGIN_ROOT (đúng như Nixus).
         (goi / "viet-thu" / "scripts" / "chay").chmod(0o755)
         env = {k: v for k, v in os.environ.items() if not k.startswith("CLAUDE_")}
         ra = subprocess.run(["sh", "-c", '"${CLAUDE_SKILL_DIR}/../viet-thu/scripts/chay"'], capture_output=True,
                             text=True, env=dict(env, CLAUDE_SKILL_DIR=str(goi / "doc-thu")))
         self.assertEqual((ra.returncode, ra.stdout.strip()), (0, "chay-duoc"), ra.stderr)
-        nguon = (self.kho / "packs" / "javis.thu" / "docs" / "NGUON.md").read_text(encoding="utf-8")
+        nguon = (self.kho / "packs" / "nixus.thu" / "docs" / "NGUON.md").read_text(encoding="utf-8")
         self.assertIn('| `"${CLAUDE_PLUGIN_ROOT}/scripts/chay"` | `"${CLAUDE_SKILL_DIR}/../viet-thu/scripts/chay"` |', nguon)
         # Repo gốc đổi cách viết: cặp thay không khớp chỗ nào thì đỏ, không lặng lẽ phát hành lệnh hỏng.
         self.cau_hinh([{"tu": "skills", "den": "skills", "thay": [{"tu": "${KHONG_CO}/x", "thanh": "y"}]}])
@@ -344,7 +344,7 @@ class TheoGoc(unittest.TestCase):
         self.commit("skill phẳng")
         self.cau_hinh([{"tu": "phang", "den": "skills", "phang": True, "bo": ["fk-b"]}])
         self.dong_bo()
-        goi = self.kho / "packs" / "javis.thu" / "skills"
+        goi = self.kho / "packs" / "nixus.thu" / "skills"
         co = sorted(p.relative_to(goi).as_posix() for p in goi.rglob("*") if p.is_file())
         self.assertEqual(co, ["fk-a/SKILL.md"], "README và thư mục con không phải skill")
         self.assertEqual((goi / "fk-a" / "SKILL.md").read_bytes(),
@@ -355,7 +355,7 @@ class TheoGoc(unittest.TestCase):
             self.dong_bo()
 
     def test_cau_hinh_sai_bi_tu_choi(self):
-        p = self.kho / "theo-goc" / "javis.thu.json"
+        p = self.kho / "theo-goc" / "nixus.thu.json"
         c = json.loads(p.read_text(encoding="utf-8"))
         for sai in ({"repo": "khong-co-gach"}, {"ref": "a..b"}, {"chep": [{"tu": "../x", "den": "skills"}]},
                     {"chep": [{"tu": "skills", "den": "plugins"}]},
@@ -397,10 +397,10 @@ class TheoGocAgent(unittest.TestCase):
         for d in ("theo-goc/dich", "packs", "dist"):
             (self.kho / d).mkdir(parents=True)
         (self.kho / "index.json").write_text(json.dumps(
-            {"format": "javis-pack-index", "format_version": 1, "updated": "",
-             "packs": [{"id": "javis.khac"}]}), encoding="utf-8")
+            {"format": "nixus-pack-index", "format_version": 1, "updated": "",
+             "packs": [{"id": "nixus.khac"}]}), encoding="utf-8")
         self.cau_hinh = {
-            "repo": "tac-gia/agents", "ref": "main", "tien_to": "ag-", "tach": "javis.ag.", "the": "Bộ AG",
+            "repo": "tac-gia/agents", "ref": "main", "tien_to": "ag-", "tach": "nixus.ag.", "the": "Bộ AG",
             "nhom_kho": {"lap-trinh": {"vi": "Lập trình", "en": "Development"}, "game": {"vi": "Làm game", "en": "Games"}},
             "chep": [{"tu": "engineering", "den": "agents", "nhan": {"vi": "Kỹ sư", "en": "Engineering"},
                       "category": "lap-trinh"},
@@ -408,7 +408,7 @@ class TheoGocAgent(unittest.TestCase):
             "goi": {"name": {"vi": "AG", "en": "AG"}, "description": {"vi": "a", "en": "a"}, "author": "Tác giả",
                     "category": "tro-ly-ai", "category_label": {"vi": "Trợ lý AI", "en": "AI"}, "license": "MIT"}}
         self.ghi_cau_hinh()
-        (self.kho / "theo-goc" / "dich" / "javis.ag.json").write_text(json.dumps(
+        (self.kho / "theo-goc" / "dich" / "nixus.ag.json").write_text(json.dumps(
             {"_doc": "x", "engineering-a": ["Trợ lý A", "Làm A thật tốt."]}), encoding="utf-8")
 
         self.tg = _nap()
@@ -422,14 +422,14 @@ class TheoGocAgent(unittest.TestCase):
         shutil.rmtree(self.tmp, ignore_errors=True)
 
     def ghi_cau_hinh(self, **sua):
-        (self.kho / "theo-goc" / "javis.ag.json").write_text(json.dumps(dict(self.cau_hinh, **sua)), encoding="utf-8")
+        (self.kho / "theo-goc" / "nixus.ag.json").write_text(json.dumps(dict(self.cau_hinh, **sua)), encoding="utf-8")
 
     def commit(self, msg):
         git(self.up, "add", "-A")
         git(self.up, "commit", "-q", "-m", msg)
 
     def dong_bo(self):
-        return self.tg.dong_bo("javis.ag", hom_nay="2026-10-29")
+        return self.tg.dong_bo("nixus.ag", hom_nay="2026-10-29")
 
     def goi(self):
         return json.loads((self.kho / "index.json").read_text(encoding="utf-8"))["packs"]
@@ -438,11 +438,11 @@ class TheoGocAgent(unittest.TestCase):
         return next((x for x in self.goi() if x["id"] == gid), None)
 
     def tep(self, *p):
-        return (self.kho / "packs" / "javis.ag" / "agents" / Path(*p)).read_text(encoding="utf-8")
+        return (self.kho / "packs" / "nixus.ag" / "agents" / Path(*p)).read_text(encoding="utf-8")
 
     def test_goi_gop_va_goi_le(self):
         self.assertTrue(self.dong_bo()["so_tach"] == 2)
-        g = self.muc("javis.ag")
+        g = self.muc("nixus.ag")
         self.assertEqual(g["kind"], "agent")
         self.assertEqual(g["provides"], {"agents": ["ag-engineering-a", "ag-unity-b"]}, "README không phải agent")
         self.assertIn("upstream", g)
@@ -460,17 +460,17 @@ class TheoGocAgent(unittest.TestCase):
         self.assertIn('\nrole: "Builds B across two lines"\n', b, "mô tả nhiều dòng gộp lại")
         self.assertIn("\ntools: Read, Write\n", b)
         self.assertIn("\nslug: ag-unity-b\n", b)
-        self.assertNotIn("goc-b", b, "khoá trùng tên khoá của Javis bị bỏ")
+        self.assertNotIn("goc-b", b, "khoá trùng tên khoá của Nixus bị bỏ")
 
         goi = [x["id"] for x in self.goi()]
-        self.assertEqual(goi, ["javis.khac", "javis.ag", "javis.ag.engineering-a", "javis.ag.unity-b"],
+        self.assertEqual(goi, ["nixus.khac", "nixus.ag", "nixus.ag.engineering-a", "nixus.ag.unity-b"],
                          "gói lẻ nằm ngay sau gói gộp")
-        la = self.muc("javis.ag.engineering-a")
+        la = self.muc("nixus.ag.engineering-a")
         self.assertNotIn("upstream", la, "gói lẻ không vào mục Đề xuất")
-        self.assertEqual((la["kind"], la["thuoc_goi"], la["category"]), ("agent", "javis.ag", "lap-trinh"))
+        self.assertEqual((la["kind"], la["thuoc_goi"], la["category"]), ("agent", "nixus.ag", "lap-trinh"))
         self.assertEqual(la["name"], {"vi": "Trợ lý A", "en": "Agent A"})
         self.assertEqual(la["description"]["en"], "Does A - well", "kho không phát hành gạch dài")
-        self.assertEqual(self.muc("javis.ag.unity-b")["category_label"], {"vi": "Làm game", "en": "Games"})
+        self.assertEqual(self.muc("nixus.ag.unity-b")["category_label"], {"vi": "Làm game", "en": "Games"})
         with zipfile.ZipFile(self.kho / la["download"]["url"]) as z:
             self.assertEqual(z.read("agents/ag-engineering-a.md").decode("utf-8"), a, "cùng byte với gói gộp")
             self.assertIn("docs/LICENSE-goc.txt", z.namelist())
@@ -483,32 +483,32 @@ class TheoGocAgent(unittest.TestCase):
             "---\nname: Agent A\ndescription: Does A\n---\nThân mới.\n", encoding="utf-8")
         self.commit("sửa A")
         self.assertTrue(self.dong_bo()["doi"])
-        self.assertEqual(self.muc("javis.ag")["version"], "1.0.1")
-        self.assertEqual(self.muc("javis.ag.engineering-a")["version"], "1.0.1")
-        self.assertEqual(self.muc("javis.ag.unity-b")["version"], "1.0.0", "agent không đổi thì gói lẻ đứng yên")
+        self.assertEqual(self.muc("nixus.ag")["version"], "1.0.1")
+        self.assertEqual(self.muc("nixus.ag.engineering-a")["version"], "1.0.1")
+        self.assertEqual(self.muc("nixus.ag.unity-b")["version"], "1.0.0", "agent không đổi thì gói lẻ đứng yên")
         (self.up / "game" / "unity" / "unity-b.md").unlink()
         self.commit("bỏ B")
         self.dong_bo()
-        self.assertIsNone(self.muc("javis.ag.unity-b"), "repo gốc bỏ agent thì gói lẻ rời danh mục")
-        self.assertFalse((self.kho / "packs" / "javis.ag.unity-b").exists())
+        self.assertIsNone(self.muc("nixus.ag.unity-b"), "repo gốc bỏ agent thì gói lẻ rời danh mục")
+        self.assertFalse((self.kho / "packs" / "nixus.ag.unity-b").exists())
 
     def test_ban_dich_doi_thi_ra_ban(self):
         self.dong_bo()
-        (self.kho / "theo-goc" / "dich" / "javis.ag.json").write_text(json.dumps(
+        (self.kho / "theo-goc" / "dich" / "nixus.ag.json").write_text(json.dumps(
             {"engineering-a": ["Trợ lý A mới", "Mô tả mới."]}), encoding="utf-8")
         self.dong_bo()
-        self.assertEqual(self.muc("javis.ag.engineering-a")["name"]["vi"], "Trợ lý A mới")
-        self.assertEqual(self.muc("javis.ag.engineering-a")["version"], "1.0.1")
+        self.assertEqual(self.muc("nixus.ag.engineering-a")["name"]["vi"], "Trợ lý A mới")
+        self.assertEqual(self.muc("nixus.ag.engineering-a")["version"], "1.0.1")
 
     def test_tu_lanh_goi_le_bi_xoa(self):
         self.dong_bo()
-        shutil.rmtree(self.kho / "packs" / "javis.ag.unity-b")
+        shutil.rmtree(self.kho / "packs" / "nixus.ag.unity-b")
         kq = self.dong_bo()
         self.assertEqual(kq["so_tach"], 1, "gói gộp đứng yên vẫn dựng lại gói lẻ bị mất")
-        self.assertTrue((self.kho / "packs" / "javis.ag.unity-b" / "javis-pack.yaml").is_file())
+        self.assertTrue((self.kho / "packs" / "nixus.ag.unity-b" / "nixus-pack.yaml").is_file())
 
     def test_cau_hinh_agent_sai(self):
-        for sua in ({"tien_to": "Ag_"}, {"tach": "javis.ag"},
+        for sua in ({"tien_to": "Ag_"}, {"tach": "nixus.ag"},
                     {"chep": [{"tu": "engineering", "den": "agents", "category": "lap-trinh"}]},
                     {"chep": [{"tu": "engineering", "den": "agents", "nhan": {"vi": "a", "en": "b"},
                                "category": "khong-khai"}]},

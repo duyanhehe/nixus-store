@@ -1,6 +1,6 @@
 # pancake-chat-mcp
 
-MCP server for the conversations of ONE Pancake page (pages.fm), built for the Javis store.
+MCP server for the conversations of ONE Pancake page (pages.fm), built for the Nixus store.
 
 - Talks to `https://pages.fm` only, through Pancake's public Page API.
 - Env: `PANCAKE_PAGE_ID`, `PANCAKE_PAGE_ACCESS_TOKEN` (Pancake: page settings > Tools; the token does not expire).

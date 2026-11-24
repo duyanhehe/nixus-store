@@ -1,0 +1,14 @@
+format: nixus-pack
+spec: 1
+id: nixus.nhanh
+version: 1.0.2
+replaces:
+  - javis.nhanh
+name: {vi: "Nhanh.vn"}
+description: {vi: "Đơn hàng, doanh thu, sản phẩm bán chạy, tồn kho và khách hàng từ Nhanh.vn. Chỉ đọc, không sửa được gì trên cửa hàng. Cần Access Token, App ID và Business ID."}
+author: {name: Nixus}
+license: MIT
+homepage: "https://github.com/duyanhehe/nixus-store"
+compat: {app: ">=0.55.27"}
+provides:
+  connectors: [connectors/nhanh.json]

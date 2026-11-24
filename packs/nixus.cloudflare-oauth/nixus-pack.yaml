@@ -1,0 +1,14 @@
+format: nixus-pack
+spec: 1
+id: nixus.cloudflare-oauth
+version: 1.0.1
+replaces:
+  - javis.cloudflare-oauth
+name: {vi: "Cloudflare (đăng nhập web)"}
+description: {vi: "Cùng MCP chính chủ của Cloudflare nhưng không cần tạo API token: bấm Kết nối, đăng nhập Cloudflare rồi tick quyền muốn cấp ngay trên trang của Cloudflare."}
+author: {name: Nixus}
+license: MIT
+homepage: "https://github.com/duyanhehe/nixus-store"
+compat: {app: ">=0.55.27"}
+provides:
+  connectors: [connectors/cloudflare-oauth.json]

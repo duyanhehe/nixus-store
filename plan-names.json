@@ -1,8 +1,8 @@
 {
-  "format": "javis-plan-names",
+  "format": "nixus-plan-names",
   "format_version": 1,
   "updated": "2026-11-04",
-  "note": "Plan code (what the vendor CLI sends) -> the name the vendor sells it under today. Javis prefers a name the vendor itself sends (Claude Code planDisplayName), then this file, then the tidied code. Leave a code out when the vendor's own pages do not settle its name.",
+  "note": "Plan code (what the vendor CLI sends) -> the name the vendor sells it under today. Nixus prefers a name the vendor itself sends (Claude Code planDisplayName), then this file, then the tidied code. Leave a code out when the vendor's own pages do not settle its name.",
   "providers": {
     "claude": {
       "pro": "Pro",

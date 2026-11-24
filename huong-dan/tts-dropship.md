@@ -1,15 +1,15 @@
-# Kết nối TTS Dropship với Javis
+# Kết nối TTS Dropship với Nixus
 
-Làm một lần, khoảng 3 phút. Xong là bạn nhờ Javis tìm hàng, thêm vào giỏ, tạo khách và lên đơn
+Làm một lần, khoảng 3 phút. Xong là bạn nhờ Nixus tìm hàng, thêm vào giỏ, tạo khách và lên đơn
 trên dropship.thitruongsi.com bằng lời nói thường.
 
-Sàn TTS không phát hành API key, nên Javis dùng chính phiên đăng nhập của bạn trên trình duyệt.
-Bạn sẽ copy **2 chuỗi** từ trình duyệt rồi dán vào Javis:
+Sàn TTS không phát hành API key, nên Nixus dùng chính phiên đăng nhập của bạn trên trình duyệt.
+Bạn sẽ copy **2 chuỗi** từ trình duyệt rồi dán vào Nixus:
 
 | Chuỗi | Dán vào ô | Để làm gì |
 |---|---|---|
-| `@publicToken` | Token đăng nhập | Cho Javis vào tài khoản của bạn |
-| `@refreshToken` | Refresh token | Cho Javis **tự gia hạn**, khỏi phải làm lại mỗi 3 ngày |
+| `@publicToken` | Token đăng nhập | Cho Nixus vào tài khoản của bạn |
+| `@refreshToken` | Refresh token | Cho Nixus **tự gia hạn**, khỏi phải làm lại mỗi 3 ngày |
 
 Cần: máy tính có Chrome, Edge hoặc Cốc Cốc. Điện thoại không làm được bước này.
 
@@ -33,9 +33,9 @@ Mở [dropship.thitruongsi.com](https://dropship.thitruongsi.com) và đăng nh�
 
 4. Không thấy gì hiện ra là **đúng**. Chuỗi đã nằm trong bộ nhớ copy của máy.
 
-## Bước 3. Dán vào Javis
+## Bước 3. Dán vào Nixus
 
-1. Mở Javis, vào trang **Kết nối**, chọn **TTS Dropship (thitruongsi.com)**.
+1. Mở Nixus, vào trang **Kết nối**, chọn **TTS Dropship (thitruongsi.com)**.
    Đã kết nối từ trước thì bấm **Sửa**.
 2. Bấm vào ô **Token đăng nhập (@publicToken)** rồi dán (`Ctrl + V`).
    Chuỗi rất dài, bắt đầu bằng `eyJ`. Dán nguyên văn, đừng cắt bớt.
@@ -48,39 +48,39 @@ Mở [dropship.thitruongsi.com](https://dropship.thitruongsi.com) và đăng nh�
    copy(localStorage.getItem('@refreshToken'))
    ```
 
-2. Qua Javis, dán vào ô **Refresh token (@refreshToken)**.
+2. Qua Nixus, dán vào ô **Refresh token (@refreshToken)**.
 
-Token đăng nhập của sàn chỉ sống khoảng 3 ngày. Có refresh token thì Javis tự xin token mới
+Token đăng nhập của sàn chỉ sống khoảng 3 ngày. Có refresh token thì Nixus tự xin token mới
 trước khi hết hạn, giống hệt cách trang web của sàn tự làm. Thiếu nó thì cứ 3 ngày bạn phải
 quay lại làm từ Bước 2.
 
 ## Bước 5. Lưu và kiểm tra
 
-1. Ô **Địa chỉ gia hạn token**: để trống. Javis đã biết sẵn địa chỉ của sàn.
+1. Ô **Địa chỉ gia hạn token**: để trống. Nixus đã biết sẵn địa chỉ của sàn.
 2. Bấm **Lưu** (hoặc **Kết nối**).
-3. Nhắn Javis: **"Kiểm tra kết nối TTS Dropship"**.
+3. Nhắn Nixus: **"Kiểm tra kết nối TTS Dropship"**.
 
-Javis sẽ thử từng việc (hồ sơ, giỏ hàng, khách hàng, tìm hàng, đơn hàng) rồi báo việc nào
+Nixus sẽ thử từng việc (hồ sơ, giỏ hàng, khách hàng, tìm hàng, đơn hàng) rồi báo việc nào
 chạy, việc nào hỏng, token còn bao lâu và có tự gia hạn được không.
 
 ---
 
 ## Chọn mức quyền
 
-Trang Kết nối có 3 mức. Chọn theo việc bạn muốn Javis làm:
+Trang Kết nối có 3 mức. Chọn theo việc bạn muốn Nixus làm:
 
-| Mức | Javis làm được |
+| Mức | Nixus làm được |
 |---|---|
 | Chỉ đọc (mặc định) | Tìm hàng, xem giỏ, xem khách, xem đơn, xem tiền về |
 | Ghi nháp | Thêm trên + thêm/sửa giỏ hàng, tạo khách mới |
 | Toàn quyền | Thêm trên + **lên đơn thật**, huỷ đơn, đánh giá đơn |
 
-Muốn Javis lên đơn hộ thì cần **Toàn quyền**. Kể cả ở mức này, mỗi đơn Javis đều đọc bản xem
+Muốn Nixus lên đơn hộ thì cần **Toàn quyền**. Kể cả ở mức này, mỗi đơn Nixus đều đọc bản xem
 trước cho bạn và chỉ tạo khi bạn đồng ý.
 
 ---
 
-## Nhờ Javis làm gì mỗi ngày
+## Nhờ Nixus làm gì mỗi ngày
 
 Nói bình thường như nhắn cho trợ lý. Vài câu mẫu:
 
@@ -97,21 +97,21 @@ Nói bình thường như nhắn cho trợ lý. Vài câu mẫu:
 - "Đơn #DS5001 lãi bao nhiêu?"
 - "Tháng này tiền về bao nhiêu, khi nào rút được?"
 
-### Javis lên đơn thế nào
+### Nixus lên đơn thế nào
 
 1. **Tách địa chỉ** từ tin nhắn và đối chiếu với danh mục tỉnh, quận, phường của chính sàn.
    Chỗ nào không chắc (ví dụ tin nhắn chỉ ghi "Thủ Đức" mà sàn có cả TP. Thủ Đức lẫn Q. Thủ
-   Đức) thì Javis hỏi lại chứ không đoán.
+   Đức) thì Nixus hỏi lại chứ không đoán.
 2. **Tìm khách theo số điện thoại.** Có rồi thì dùng lại. Chưa có mới tạo. Sàn không cho xoá
-   khách, nên Javis tự chặn việc tạo trùng.
+   khách, nên Nixus tự chặn việc tạo trùng.
 3. **Tìm hàng** và lấy đúng mã màu, size.
 4. **Thêm vào giỏ**, kiểm giá bán không thấp hơn giá nhập.
 5. **Báo giá ship** tới địa chỉ của khách.
 6. **Đọc bản xem trước**: tên, số điện thoại, địa chỉ, từng món, phí ship, tổng khách trả,
-   lãi ước tính. Bạn đồng ý thì Javis mới tạo đơn thật.
+   lãi ước tính. Bạn đồng ý thì Nixus mới tạo đơn thật.
 
 Đơn đã tạo thì sàn **không cho sửa**, sai là phải huỷ rồi lên lại. Vì vậy hãy đọc kỹ bản xem
-trước. Gọi lại y hệt một đơn vừa tạo thì Javis tự chặn để khỏi ra hai đơn.
+trước. Gọi lại y hệt một đơn vừa tạo thì Nixus tự chặn để khỏi ra hai đơn.
 
 Giỏ có hàng của 3 nhà cung cấp thì ra 3 đơn, 3 phí ship. Đây là cách sàn tính, không phải lỗi.
 
@@ -127,7 +127,7 @@ Có thể bạn chưa dán refresh token, hoặc đã đăng xuất hay đổi m
 sàn rồi làm lại Bước 2 tới Bước 5, nhớ dán cả hai chuỗi.
 
 **Tìm hàng không ra kết quả**
-Nhắn "Kiểm tra kết nối TTS Dropship". Nếu phần tìm hàng báo lỗi về tên trường, Javis thường
+Nhắn "Kiểm tra kết nối TTS Dropship". Nếu phần tìm hàng báo lỗi về tên trường, Nixus thường
 tự sửa ở lần gọi sau. Sàn TTS không có tài liệu API chính thức nên họ có thể đổi bất cứ lúc
 nào, và gói được làm để tự thích nghi khi điều đó xảy ra.
 
@@ -142,7 +142,7 @@ dòng rồi copy giá trị ở khung bên dưới.
 
 - Hai chuỗi này mở được tài khoản bán hàng của bạn. Coi nó như mật khẩu, **không gửi cho ai**,
   kể cả người tự nhận là hỗ trợ của sàn.
-- Javis mã hoá token trước khi lưu và không ghi token vào nhật ký.
+- Nixus mã hoá token trước khi lưu và không ghi token vào nhật ký.
 - Gói này **không có chức năng rút tiền**. Muốn rút tiền thì vào ví trên web của sàn.
-- Muốn thu hồi quyền: xoá kết nối TTS Dropship trong trang Kết nối của Javis. Nghi token bị lộ
+- Muốn thu hồi quyền: xoá kết nối TTS Dropship trong trang Kết nối của Nixus. Nghi token bị lộ
   thì đổi mật khẩu tài khoản sàn.

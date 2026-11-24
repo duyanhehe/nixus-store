@@ -1,15 +1,15 @@
 # Gửi một gói vào kho
 
 Gói trong kho **chạy trên máy người khác**, và gói bậc `code` chạy Python thật bên trong máy chủ
-Javis của họ - đọc được mọi khoá API và mọi tệp mà Javis đọc được. Vì vậy mọi Pull Request đều
+Nixus của họ - đọc được mọi khoá API và mọi tệp mà Nixus đọc được. Vì vậy mọi Pull Request đều
 được đọc mã trước khi trộn, và phần lớn hướng dẫn dưới đây tồn tại để việc đọc đó nhanh và chắc.
 
 ## Các bước
 
 1. Fork repo này.
-2. Tạo `packs/<id>/` với `javis-pack.yaml` ở gốc. `id` phải **trùng đúng tên thư mục**, chỉ gồm
-   chữ thường, số và `. - _`, và **bằng tiếng Anh** (`javis.crm`, không phải `javis.khach-hang-crm`).
-   Tên thương hiệu như `javis.kiotviet` giữ nguyên. Tên hiển thị thì vẫn viết cả tiếng Việt lẫn tiếng Anh.
+2. Tạo `packs/<id>/` với `nixus-pack.yaml` ở gốc. `id` phải **trùng đúng tên thư mục**, chỉ gồm
+   chữ thường, số và `. - _`, và **bằng tiếng Anh** (`nixus.crm`, không phải `nixus.khach-hang-crm`).
+   Tên thương hiệu như `nixus.kiotviet` giữ nguyên. Tên hiển thị thì vẫn viết cả tiếng Việt lẫn tiếng Anh.
 3. Đóng gói và lấy dấu vân tay:
 
        python tools/dong-goi.py <id>
@@ -33,7 +33,7 @@ Cả mã nguồn lẫn tệp `.zip` đều phải có trong PR. Thiếu một tr
 
 ## Gói của bạn sẽ bị đọc những gì
 
-- **Mọi tệp `.py`.** Gói không có tệp `.py` vẫn có thể chạy mã: `transport: stdio` khiến Javis
+- **Mọi tệp `.py`.** Gói không có tệp `.py` vẫn có thể chạy mã: `transport: stdio` khiến Nixus
   chạy `npx` với toàn bộ biến môi trường của máy chủ. Khai `command`, `args` hay `env` là gói
   thuộc bậc `code`, dù không một dòng Python nào.
 - **Địa chỉ gói gọi ra ngoài.** Một connector dựng URL từ dữ liệu người dùng là chỗ phải giải
@@ -48,10 +48,10 @@ Cả mã nguồn lẫn tệp `.zip` đều phải có trong PR. Thiếu một tr
 
 ## Phân loại quyền: chỗ dễ sai nhất
 
-Javis xếp mỗi tool vào ba nhóm `read` / `write` / `danger`, khai trong `tool_meta` của khuôn
+Nixus xếp mỗi tool vào ba nhóm `read` / `write` / `danger`, khai trong `tool_meta` của khuôn
 connector. Mức **Ghi nháp** của người dùng tự chạy được mọi thứ trong nhóm `write` mà không hỏi.
 
-Điều phải biết: **Javis KHÔNG tự đoán ra `danger`.** Tool nào bạn không khai rõ thì cùng lắm nó
+Điều phải biết: **Nixus KHÔNG tự đoán ra `danger`.** Tool nào bạn không khai rõ thì cùng lắm nó
 rơi vào `write` theo tên. Nên một tool xoá dữ liệu hay tiêu tiền mà bạn quên khai sẽ tự chạy ở
 mức Ghi nháp, im lặng, cho tới lúc nó xoá thật.
 
@@ -66,7 +66,7 @@ mức Ghi nháp, im lặng, cho tới lúc nó xoá thật.
 
       "ghi_da_can_nhac": ["delete_list_item", "restore_note"]
 
-  Trường này Javis không đọc; nó chỉ để lại dấu vết rằng quyết định ấy là có chủ ý, cho người
+  Trường này Nixus không đọc; nó chỉ để lại dấu vết rằng quyết định ấy là có chủ ý, cho người
   review sau đọc được. Đừng dùng nó để cho qua trình kiểm - dùng thế thì thà khai `danger`.
 
 Khai `danger` thì khuôn phải có câu `risk` nói bằng lời thường chuyện gì có thể mất.
@@ -86,8 +86,8 @@ Bên thứ 3 ra bản mới thì mọi máy chạy bản đó ở lần khởi �
 Hai ngoại lệ, khai bằng `ngoai_le_ban_chinh_thuc` ở gốc khuôn connector, một câu nói rõ vì sao:
 
 - Bên thứ 3 chưa phát hành bản nào, nên chỉ có đường GitHub.
-- Javis thôi đi theo bản gốc và tự giữ một bản riêng. Ví dụ duy nhất hiện có: Zalo trong app, từ
-  Javis 0.83.0 chạy [`javis-zalo`](https://github.com/blogminhquy/javis-zalo) (bản CLI riêng, ghim
+- Nixus thôi đi theo bản gốc và tự giữ một bản riêng. Ví dụ duy nhất hiện có: Zalo trong app, từ
+  Nixus 0.83.0 chạy [`javis-zalo`](https://github.com/blogminhquy/javis-zalo) (bản CLI riêng, ghim
   theo tag phát hành), chỉ thư viện `zca-js` bên dưới là còn đi theo bản chính thức.
 
 `tools/kiem-tra.py` chặn mọi connector `npx`/`uvx` không theo luật này.
@@ -105,14 +105,14 @@ riêng: KHÔNG thư viện phụ thuộc (đọc hết được trong một lầ
 token ra log. `tools/mcp_dong_goi.py <tên>` đóng `.tgz` ra đúng một sha256, trình kiểm so từng tệp trong
 `.tgz` với thư mục nguồn, và test của nó đặt ở `tests/<id gói>/` chạy chính tệp đã đóng gói.
 
-Cái giá của luật là bản mới có thể mang **tool mới chưa ai phân loại**, và Javis xếp một tool
+Cái giá của luật là bản mới có thể mang **tool mới chưa ai phân loại**, và Nixus xếp một tool
 không khai, tên không chứa từ gợi ý ghi nào, vào nhóm **đọc** (vụ thật lúc đặt luật:
 `workspace-mcp` 2.x thêm `run_script_function`). Vì vậy CI có thêm job `soi-ban-moi`, chạy mỗi
-ngày: nó chạy thử bản mới nhất thật của từng MCP, phân loại tool thật bằng đúng hàm của Javis,
+ngày: nó chạy thử bản mới nhất thật của từng MCP, phân loại tool thật bằng đúng hàm của Nixus,
 và đỏ khi có tool phá huỷ hay tiêu tiền chưa nằm ở nhóm `danger`. Thấy đỏ thì khai tool đó trong
 `tool_meta` rồi ra bản gói mới. Chạy tay:
 
-    JAVIS_OS_DIR=../javis-os python tools/soi-ban-moi.py
+    NIXUS_OS_DIR=../nixusai python tools/soi-ban-moi.py
 
 MCP **chính chủ chạy từ xa** (`transport: http`, ví dụ GitHub) không chạy thử được vì cần đăng
 nhập. Nếu bên đó công bố danh sách tool trong mã nguồn mỗi bản phát hành, nối khuôn với nguồn đó
@@ -121,35 +121,35 @@ bằng một tệp `chinh-chu/<id>.json` (xem `chinh-chu/github.json` làm mẫu
 áp cùng luật cộng nhãn đọc/ghi/phá huỷ của chính bên đó, và đỏ khi bộ tool khác bộ kho đã soát.
 Đọc ghi chú phát hành, sửa `tool_meta` nếu cần, rồi ghi lại bộ đã soát:
 
-    JAVIS_OS_DIR=../javis-os python tools/soi-ban-moi.py --chi-chinh-chu --ghi-da-soat
+    NIXUS_OS_DIR=../nixusai python tools/soi-ban-moi.py --chi-chinh-chu --ghi-da-soat
 
 Ghi lại bộ đã soát không cần ra bản gói, vì `chinh-chu/` nằm ngoài `packs/`.
 
 MCP dạng **cổng** (một tool chạy được mọi lệnh, như `execute` của Hostinger 2.x) thì phân loại
-theo từng lệnh con bằng `call_rules`, xem khuôn `packs/javis.hostinger/` làm mẫu. Lệnh con
+theo từng lệnh con bằng `call_rules`, xem khuôn `packs/nixus.hostinger/` làm mẫu. Lệnh con
 không có trong danh sách đọc phải rơi về `danger`, để lệnh bên thứ 3 thêm sau này không tự chạy.
 
 ## Điều gì bị từ chối
 
-- `transport: internal` và `auth.type: qr` - hai đường riêng của lõi Javis, không khai bằng gói.
+- `transport: internal` và `auth.type: qr` - hai đường riêng của lõi Nixus, không khai bằng gói.
 - Gói làm thay việc đã có MCP chính chủ. Đấu MCP đó vào còn hơn.
 - Gói tự ý gửi dữ liệu người dùng đi đâu đó, kể cả "để thống kê".
 
 ## Test cho gói có mã
 
-Plugin chạy bên trong máy chủ Javis và gọi module của lõi, nên test của nó đặt ở `tests/<id gói>/test_*.py`
-(ngoài `packs/`, nên không vào tệp `.zip`) và chạy trên một bản checkout Javis OS:
+Plugin chạy bên trong máy chủ Nixus và gọi module của lõi, nên test của nó đặt ở `tests/<id gói>/test_*.py`
+(ngoài `packs/`, nên không vào tệp `.zip`) và chạy trên một bản checkout Nixus AI:
 
-    JAVIS_OS_DIR=../javis-os python tests/javis.zalo/test_zalo_read_images.py
+    NIXUS_OS_DIR=../nixusai python tests/nixus.zalo/test_zalo_read_images.py
 
-CI chạy mọi tệp đó trên nhánh `main` của Javis OS ở mỗi Pull Request và mỗi ngày một lần, để lõi đổi mà
-gói gãy thì biết ngay. Xem `tests/javis.zalo/` làm mẫu.
+CI chạy mọi tệp đó trên nhánh `main` của Nixus AI ở mỗi Pull Request và mỗi ngày một lần, để lõi đổi mà
+gói gãy thì biết ngay. Xem `tests/nixus.zalo/` làm mẫu.
 
 ## Tính năng Zalo mới: vào plugin `zalo-extras`, không tạo plugin mới
 
 Chủ kho chốt 08/11/2026: tính năng Zalo mới phải cho vào plugin Zalo có sẵn, đừng tạo plugin mới. Trước bản 2.0.0
 mỗi tính năng Zalo lại thêm một plugin (gửi ảnh, nhóm, đọc ảnh, kết bạn), nên trang Plugin bị phân mảnh. Gói
-`javis.zalo` giờ chỉ có MỘT plugin là `packs/javis.zalo/plugins/zalo-extras/`.
+`nixus.zalo` giờ chỉ có MỘT plugin là `packs/nixus.zalo/plugins/zalo-extras/`.
 
 - Tool Zalo mới: thêm hàm vào module đúng mảng (`send_media.py`, `group.py`, `read_images.py`, `friend.py`), hoặc một
   module mới cạnh đó rồi thêm tên vào `_PARTS` trong `plugin.py`. Mỗi module tự `register(ctx)` các tool của nó.
@@ -157,7 +157,7 @@ mỗi tính năng Zalo lại thêm một plugin (gửi ảnh, nhóm, đọc ản
   là `safe`, gửi hay đổi gì trên Zalo là `full`.
 - Nâng `version` của `plugin.yaml` cùng với gói (test đòi hai số bằng nhau), rồi ra bản như mục dưới.
 - **Không** thêm thư mục plugin thứ hai vào gói, cũng không làm gói Zalo riêng cho một tính năng.
-  `tests/javis.zalo/test_zalo_extras.py` đỏ khi có thêm thư mục plugin, khi mất một tool, hay khi một tool bị đổi mức
+  `tests/nixus.zalo/test_zalo_extras.py` đỏ khi có thêm thư mục plugin, khi mất một tool, hay khi một tool bị đổi mức
   quyền mà không ai sửa danh sách mức quyền trong test.
 
 ## Ra bản mới
@@ -166,18 +166,18 @@ Tăng `version` ở **cả hai** chỗ: manifest trong gói và mục trong `ind
 mới vào `dist/` (giữ tệp cũ lại, đừng ghi đè - người dùng cần tải được bản cũ), rồi đổi
 `download.url` và `sha256`.
 
-**Đổi mã gói** (Javis 0.440.0 trở lên): đổi tên thư mục và `id`, tăng `version`, và khai mã cũ ở
+**Đổi mã gói** (Nixus 0.440.0 trở lên): đổi tên thư mục và `id`, tăng `version`, và khai mã cũ ở
 cả manifest lẫn mục danh mục:
 
     replaces:
-      - javis.ma-cu
+      - nixus.ma-cu
 
-Máy đang cài mã cũ thấy gói mới như một bản cập nhật. Cài lên là Javis chuyển dữ liệu riêng của
+Máy đang cài mã cũ thấy gói mới như một bản cập nhật. Cài lên là Nixus chuyển dữ liệu riêng của
 plugin, năng lực trong brain và trạng thái bật sang mã mới rồi gỡ gói cũ. Plugin đổi tên thì đường
 `/ext/<tên cũ>/` vẫn tới plugin mới. Đặt `compat.app: ">=0.440.0"`, vì bản cũ hơn không hiểu
 `replaces` và sẽ cài gói mới nằm cạnh gói cũ.
 
-Người đã cài sẽ thấy nút đổi thành **Có bản mới**. Javis **không tự cài đè một gói có mã**: mã
+Người đã cài sẽ thấy nút đổi thành **Có bản mới**. Nixus **không tự cài đè một gói có mã**: mã
 Python hay khuôn connector trong gói đổi thì người dùng phải mở ra xem rồi mới cài, nếu không chốt
 chữ ký nội dung thành vô nghĩa. MCP của bên thứ 3 mà gói gọi tới thì khác: nó đi theo bản chính
 thức mới nhất của bên đó (xem mục trên), không cần ra bản gói.

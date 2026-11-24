@@ -1,0 +1,14 @@
+format: nixus-pack
+spec: 1
+id: nixus.google-tasks
+version: 1.0.5
+replaces:
+  - javis.google-tasks
+name: {vi: "Google Tasks"}
+description: {vi: "Việc cần làm trong Google Tasks: xem danh sách, thêm việc, đặt hạn, đánh dấu xong. Chỉ xin quyền Tasks, không đụng Gmail hay Drive. Đăng nhập Google bằng OAuth client tự tạo (~10 phút, có hướng dẫn)."}
+author: {name: Nixus}
+license: MIT
+homepage: "https://github.com/duyanhehe/nixus-store"
+compat: {app: ">=0.55.27"}
+provides:
+  connectors: [connectors/google-tasks.json]

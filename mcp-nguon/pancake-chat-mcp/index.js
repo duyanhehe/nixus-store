@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Pancake chat MCP: read and work the conversations of ONE Pancake page (pages.fm) through Pancake's public Page API.
 //
-// Written for the Javis store (javis-store/mcp-nguon/pancake-chat-mcp) because no usable Pancake chat MCP existed
+// Written for the Nixus store (nixus-store/mcp-nguon/pancake-chat-mcp) because no usable Pancake chat MCP existed
 // (2026-10-14): the community ones had no license, scraped a browser token, or sent the Pancake token to third-party
 // hosts. This one is small on purpose so a reviewer can read all of it:
 //   - no dependencies, Node >= 18 (global fetch), stdio JSON-RPC (one JSON message per line);
@@ -16,7 +16,7 @@
 
 "use strict";
 
-const VERSION = "1.1.0";
+const VERSION = "1.1.1";
 const PAGE_ID = String(process.env.PANCAKE_PAGE_ID || "").trim();
 const TOKEN = String(process.env.PANCAKE_PAGE_ACCESS_TOKEN || "").trim();
 const MAX_OUT = 60000; // characters of JSON handed back to the model per call
