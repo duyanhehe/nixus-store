@@ -1,7 +1,7 @@
 {
   "format": "nixus-pack-index",
   "format_version": 1,
-  "updated": "2026-11-24",
+  "updated": "2026-11-28",
   "store": {
     "name": "Kho cài đặt Nixus",
     "url": "https://github.com/duyanhehe/nixus-store"
@@ -2282,7 +2282,7 @@
         "vi": "Bộ skill quy trình làm việc nổi nhất cho dân lập trình (obra/superpowers): brainstorm trước khi code, viết và thực thi plan, TDD, gỡ lỗi có hệ thống, review code hai chiều, git worktree, kiểm chứng trước khi báo xong.",
         "en": "The most popular workflow skills for developers (obra/superpowers): brainstorm before coding, write and execute plans, TDD, systematic debugging, both sides of code review, git worktrees, verify before claiming done."
       },
-      "version": "1.0.2",
+      "version": "1.0.3",
       "author": {
         "name": "Jesse Vincent",
         "url": "https://github.com/obra/superpowers"
@@ -2294,15 +2294,15 @@
       },
       "tier": "data",
       "verified": true,
-      "updated": "2026-11-24",
+      "updated": "2026-11-28",
       "homepage": "https://github.com/duyanhehe/nixus-store/tree/main/packs/nixus.superpowers",
       "source": "https://github.com/obra/superpowers",
       "license": "MIT",
       "upstream": {
         "repo": "obra/superpowers",
         "ref": "main",
-        "commit": "2ce8aa15d05bd57213e6f746f953aafb7ded7a8b",
-        "synced": "2026-10-28"
+        "commit": "22f0b463e7a5e579904dd6211a520321035526f7",
+        "synced": "2026-11-28"
       },
       "provides": {
         "skills": [
@@ -2324,13 +2324,10 @@
         ]
       },
       "download": {
-        "url": "dist/nixus-superpowers-1.0.2.zip",
-        "sha256": "7155baedbf8b4ee5eb0a3d849b825d292b052ba37175d904ad1a745b7ec4c065",
-        "size": 197661
-      },
-      "replaces": [
-        "javis.superpowers"
-      ]
+        "url": "dist/nixus-superpowers-1.0.3.zip",
+        "sha256": "804e309c45bd98e2ab17c618924eefc074fa617912bffbb70db12f3d1876dad8",
+        "size": 195454
+      }
     },
     {
       "id": "nixus.playwright",
@@ -3405,7 +3402,7 @@
         "vi": "Skill của Lemomo dựng phim ngắn hoàn toàn bằng code theo 59 phong cách (sơn dầu, màu nước, ukiyo-e, ảnh vệ tinh...): kịch bản, hình, nhạc, lồng tiếng. Cần Node 20+, ffmpeg, Python 3.11+; chạy tốt nhất với Claude.",
         "en": "Lemomo's skill for short films made entirely in code in 59 styles (oil paint, watercolor, ukiyo-e, satellite...): story, picture, score, narration. Needs Node 20+, ffmpeg, Python 3.11+; tuned for Claude."
       },
-      "version": "1.0.1",
+      "version": "1.0.2",
       "author": {
         "name": "Lemomo",
         "url": "https://github.com/lemomo-ai/lemo-opuscar"
@@ -3417,15 +3414,15 @@
       },
       "tier": "data",
       "verified": true,
-      "updated": "2026-11-24",
+      "updated": "2026-11-28",
       "homepage": "https://github.com/duyanhehe/nixus-store/tree/main/packs/nixus.lemo-opuscar",
       "source": "https://github.com/lemomo-ai/lemo-opuscar",
       "license": "MIT",
       "upstream": {
         "repo": "lemomo-ai/lemo-opuscar",
         "ref": "main",
-        "commit": "413a6bd6d78ebd3bdd5abaec9538a26867f890df",
-        "synced": "2026-10-28"
+        "commit": "439b98af08b04400f8fd8a8dd19cd773c0c96532",
+        "synced": "2026-11-28"
       },
       "provides": {
         "skills": [
@@ -3433,13 +3430,10 @@
         ]
       },
       "download": {
-        "url": "dist/nixus-lemo-opuscar-1.0.1.zip",
-        "sha256": "e0b46850604edd4a0c917283a20453e589037c7cdb83383c45754381ca6ba3a9",
-        "size": 6946
-      },
-      "replaces": [
-        "javis.lemo-opuscar"
-      ]
+        "url": "dist/nixus-lemo-opuscar-1.0.2.zip",
+        "sha256": "39c816e0fe53e71d61e8855e6b1e192334f5033341fbac14d7ac3bcee12be853",
+        "size": 10971
+      }
     },
     {
       "id": "nixus.remotion",
@@ -3452,7 +3446,7 @@
         "vi": "Bộ skill chính chủ của Remotion (remotion.dev): tạo dự án video bằng React, hoạt hình, chữ và hiệu ứng, phụ đề, bản đồ, xem trước và xuất video. Theo repo gốc, cập nhật mỗi khi Remotion sửa skill.",
         "en": "Remotion's official skills (remotion.dev): create React video projects, animation, type and effects, captions, maps, preview and render. Follows the source repo and updates whenever Remotion changes its skills."
       },
-      "version": "1.0.5",
+      "version": "1.0.6",
       "author": {
         "name": "Remotion",
         "url": "https://github.com/remotion-dev/skills"
@@ -3464,15 +3458,15 @@
       },
       "tier": "data",
       "verified": true,
-      "updated": "2026-11-24",
+      "updated": "2026-11-28",
       "homepage": "https://github.com/duyanhehe/nixus-store/tree/main/packs/nixus.remotion",
       "source": "https://github.com/remotion-dev/skills",
       "license": "Remotion License",
       "upstream": {
         "repo": "remotion-dev/skills",
         "ref": "main",
-        "commit": "1fc074b74b95cfecf7b1e419132f2cfe23dafebe",
-        "synced": "2026-11-11"
+        "commit": "a3f4098a2afd0e13f6a6f8c8760e275f75457ea9",
+        "synced": "2026-11-28"
       },
       "provides": {
         "skills": [
@@ -3480,6 +3474,7 @@
           "remotion-captions",
           "remotion-create",
           "remotion-docs",
+          "remotion-elements",
           "remotion-interactivity",
           "remotion-license",
           "remotion-maps",
@@ -3492,13 +3487,10 @@
         ]
       },
       "download": {
-        "url": "dist/nixus-remotion-1.0.5.zip",
-        "sha256": "42b1001d5a97fc250df7045f75fde8d0c79f231a50b8f7356381970058728eb7",
-        "size": 884563
-      },
-      "replaces": [
-        "javis.remotion"
-      ]
+        "url": "dist/nixus-remotion-1.0.6.zip",
+        "sha256": "479d3dd60541a5950cce1069343f7aec4c12f302d1ceba614618e728f068cb18",
+        "size": 416837
+      }
     },
     {
       "id": "nixus.anthropic-marketing",
@@ -3795,7 +3787,7 @@
         "vi": "12 skill của GitNexus: dựng đồ thị phụ thuộc của cả codebase rồi dùng nó để khám phá mã, gỡ lỗi, đánh giá tác động trước khi sửa, refactor, review PR. Cần chạy npx gitnexus analyze. Giấy phép chỉ cho dùng phi thương mại.",
         "en": "12 GitNexus skills: index the whole codebase into a dependency graph and use it to explore code, debug, check impact before an edit, refactor and review PRs. Needs npx gitnexus analyze. Licensed for noncommercial use only."
       },
-      "version": "1.0.3",
+      "version": "1.0.4",
       "author": {
         "name": "Abhigyan Patwari",
         "url": "https://github.com/abhigyanpatwari/GitNexus"
@@ -3807,15 +3799,15 @@
       },
       "tier": "data",
       "verified": true,
-      "updated": "2026-11-24",
+      "updated": "2026-11-28",
       "homepage": "https://github.com/duyanhehe/nixus-store/tree/main/packs/nixus.gitnexus",
       "source": "https://github.com/abhigyanpatwari/GitNexus",
       "license": "PolyForm-Noncommercial-1.0.0",
       "upstream": {
         "repo": "abhigyanpatwari/GitNexus",
         "ref": "main",
-        "commit": "fb85794c621f89217ceb7fc9e708459e4f21ba77",
-        "synced": "2026-11-05"
+        "commit": "4a1afa0752787bf19adc232fa2c3281e61bc4038",
+        "synced": "2026-11-28"
       },
       "provides": {
         "skills": [
@@ -3834,13 +3826,10 @@
         ]
       },
       "download": {
-        "url": "dist/nixus-gitnexus-1.0.3.zip",
-        "sha256": "695f1785a1a200e30c1807e6c84a12ab9be30f47c8a5f65e20a00472c1609224",
-        "size": 150037
-      },
-      "replaces": [
-        "javis.gitnexus"
-      ]
+        "url": "dist/nixus-gitnexus-1.0.4.zip",
+        "sha256": "27aeb192215a34767c6ef5f8b41c9d6e8aaf05c638b104c4890e9cb29aa59342",
+        "size": 151026
+      }
     },
     {
       "id": "nixus.humanizer",
@@ -3853,7 +3842,7 @@
         "vi": "Skill sửa văn bản cho bớt mùi AI: nhận ra và gỡ các dấu hiệu quen thuộc (từ sáo rỗng, câu ba vế, kết luận chung chung) để bài viết đọc như người thật viết. Dùng tốt nhất với nội dung tiếng Anh.",
         "en": "Edits text so it stops sounding like AI: spots and removes the familiar tells (stock words, rule of three, vague wrap-ups) so the piece reads as written by a person. Works best on English."
       },
-      "version": "1.0.1",
+      "version": "1.0.2",
       "author": {
         "name": "Siqi Chen",
         "url": "https://github.com/blader/humanizer"
@@ -3865,15 +3854,15 @@
       },
       "tier": "code",
       "verified": true,
-      "updated": "2026-11-24",
+      "updated": "2026-11-28",
       "homepage": "https://github.com/duyanhehe/nixus-store/tree/main/packs/nixus.humanizer",
       "source": "https://github.com/blader/humanizer",
       "license": "MIT",
       "upstream": {
         "repo": "blader/humanizer",
         "ref": "main",
-        "commit": "0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0",
-        "synced": "2026-10-28"
+        "commit": "a32f24407364c74c812b43c15926d638bee1e072",
+        "synced": "2026-11-28"
       },
       "provides": {
         "skills": [
@@ -3881,13 +3870,10 @@
         ]
       },
       "download": {
-        "url": "dist/nixus-humanizer-1.0.1.zip",
-        "sha256": "d853cbff3b66d573fb0df8bae9a4dcea7caebc1b87bc4e87ab3a5006cf22115a",
-        "size": 28096
-      },
-      "replaces": [
-        "javis.humanizer"
-      ]
+        "url": "dist/nixus-humanizer-1.0.2.zip",
+        "sha256": "83214d46d38707a0cecc6778a9060e342a2ee0317f80d9f83e021dae4302d7d4",
+        "size": 30780
+      }
     },
     {
       "id": "nixus.hyperframes",
@@ -3900,7 +3886,7 @@
         "vi": "Bộ skill của HeyGen để AI làm video bằng HTML: lên ý tưởng, dựng cảnh, hoạt hình, slideshow, lấy thiết kế từ Figma, chuyển dự án Remotion sang, rồi xuất video. Cần Node 22+ và ffmpeg.",
         "en": "HeyGen's skills for making video in HTML: plan, build scenes, animate, slideshows, pull designs from Figma, migrate Remotion projects, then render. Needs Node 22+ and ffmpeg."
       },
-      "version": "1.0.1",
+      "version": "1.0.2",
       "author": {
         "name": "HeyGen",
         "url": "https://github.com/heygen-com/hyperframes"
@@ -3912,15 +3898,15 @@
       },
       "tier": "code",
       "verified": true,
-      "updated": "2026-11-24",
+      "updated": "2026-11-28",
       "homepage": "https://github.com/duyanhehe/nixus-store/tree/main/packs/nixus.hyperframes",
       "source": "https://github.com/heygen-com/hyperframes",
       "license": "Apache-2.0",
       "upstream": {
         "repo": "heygen-com/hyperframes",
         "ref": "main",
-        "commit": "7758d9b8fd507384573eb56ba84cc62fb20444c6",
-        "synced": "2026-10-28"
+        "commit": "95fbc4fc9d217334201f90bd20bd688a3dfbc98f",
+        "synced": "2026-11-28"
       },
       "provides": {
         "skills": [
@@ -3930,17 +3916,16 @@
           "hyperframes-registry",
           "media-use",
           "remotion-to-hyperframes",
-          "slideshow"
+          "reverse-any-video",
+          "slideshow",
+          "style-sampling"
         ]
       },
       "download": {
-        "url": "dist/nixus-hyperframes-1.0.1.zip",
-        "sha256": "8e8527713a240c99ac790da9d951db532e903aa578c71177b6566979d1cfdbcf",
-        "size": 2077766
-      },
-      "replaces": [
-        "javis.hyperframes"
-      ]
+        "url": "dist/nixus-hyperframes-1.0.2.zip",
+        "sha256": "c1af0835c7e736c0faccc1f66ef165253123579f4aa45e51885a48869da94ee7",
+        "size": 2216699
+      }
     },
     {
       "id": "nixus.marketingskills",
@@ -3953,7 +3938,7 @@
         "vi": "52 skill marketing của Corey Haines, repo marketing nhiều sao nhất: viết copy, tối ưu chuyển đổi, SEO và SEO cho AI, quảng cáo, email, định giá, ra mắt sản phẩm, giới thiệu bạn bè, đo lường, chống rời bỏ.",
         "en": "Corey Haines's 52 marketing skills, the most-starred marketing repo: copywriting, conversion, SEO and AI search, ads, email, pricing, launches, referrals, analytics and churn prevention."
       },
-      "version": "1.0.2",
+      "version": "1.0.3",
       "author": {
         "name": "Corey Haines",
         "url": "https://github.com/coreyhaines31/marketingskills"
@@ -3965,15 +3950,15 @@
       },
       "tier": "code",
       "verified": true,
-      "updated": "2026-11-24",
+      "updated": "2026-11-28",
       "homepage": "https://github.com/duyanhehe/nixus-store/tree/main/packs/nixus.marketingskills",
       "source": "https://github.com/coreyhaines31/marketingskills",
       "license": "MIT",
       "upstream": {
         "repo": "coreyhaines31/marketingskills",
         "ref": "main",
-        "commit": "820ad2c1c0ac4cc350158bd7912c753681a7d173",
-        "synced": "2026-10-30"
+        "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+        "synced": "2026-11-28"
       },
       "provides": {
         "skills": [
@@ -4020,6 +4005,7 @@
           "prospecting",
           "public-relations",
           "referrals",
+          "reverse-engineer-marketing",
           "revops",
           "sales-enablement",
           "schema",
@@ -4032,13 +4018,10 @@
         ]
       },
       "download": {
-        "url": "dist/nixus-marketingskills-1.0.2.zip",
-        "sha256": "c6e4df63e6d8d19d3be0c368cd48c098efb12e72565993a04de2551191602377",
-        "size": 1691441
-      },
-      "replaces": [
-        "javis.marketingskills"
-      ]
+        "url": "dist/nixus-marketingskills-1.0.3.zip",
+        "sha256": "645f0413b15fb18c38c1625f11f26ee81d82cf2430bad4fa3a3c503609074818",
+        "size": 1931399
+      }
     },
     {
       "id": "nixus.mattpocock",
@@ -4051,7 +4034,7 @@
         "vi": "Bộ skill của Matt Pocock: thiết kế codebase, chẩn đoán lỗi, TDD, viết spec và chia ticket, review code, nguyên mẫu nhanh, cùng các skill làm việc như hỏi vặn ý tưởng (grill-me), bàn giao, viết cho AI agent.",
         "en": "Matt Pocock's skills: codebase design, diagnosing bugs, TDD, writing specs and splitting tickets, code review, quick prototypes, plus working skills such as grill-me, handoffs and writing for agents."
       },
-      "version": "1.0.3",
+      "version": "1.0.4",
       "author": {
         "name": "Matt Pocock",
         "url": "https://github.com/mattpocock/skills"
@@ -4063,15 +4046,15 @@
       },
       "tier": "data",
       "verified": true,
-      "updated": "2026-11-24",
+      "updated": "2026-11-28",
       "homepage": "https://github.com/duyanhehe/nixus-store/tree/main/packs/nixus.mattpocock",
       "source": "https://github.com/mattpocock/skills",
       "license": "MIT",
       "upstream": {
         "repo": "mattpocock/skills",
         "ref": "main",
-        "commit": "a496f5513d4a4cf889bc48e189e579f4b0bdf6aa",
-        "synced": "2026-10-30"
+        "commit": "bbadaa631c37af594e5a05c9cefacd9956136b18",
+        "synced": "2026-11-28"
       },
       "provides": {
         "skills": [
@@ -4105,13 +4088,10 @@
         ]
       },
       "download": {
-        "url": "dist/nixus-mattpocock-1.0.3.zip",
-        "sha256": "f0a297b1d419acf18357c9c8aa7663f679f7c2d5e8d85be4c06f8af096bfa139",
-        "size": 113519
-      },
-      "replaces": [
-        "javis.mattpocock"
-      ]
+        "url": "dist/nixus-mattpocock-1.0.4.zip",
+        "sha256": "39bad5ce70343c6b3b596ee2ba1a1d76bae8465d026b8a5880800bdaa86b660a",
+        "size": 113580
+      }
     },
     {
       "id": "nixus.rea",
@@ -4124,7 +4104,7 @@
         "vi": "Skill của REA (Reverse Engineer Anything), repo AI đang nổi nhất GitHub: phân tích app Electron/JavaScript, tệp chạy, firmware và trang web khi không có mã nguồn, so sánh phiên bản, dịch ngược. Cần cài công cụ rea (npm rea-agents).",
         "en": "The REA (Reverse Engineer Anything) skill, GitHub's top trending AI repo: analyse Electron/JavaScript apps, binaries, firmware and web apps without their source, compare versions, decompile. Needs the rea tool (npm rea-agents)."
       },
-      "version": "1.0.11",
+      "version": "1.0.12",
       "author": {
         "name": "morluto",
         "url": "https://github.com/morluto/rea"
@@ -4136,15 +4116,15 @@
       },
       "tier": "data",
       "verified": true,
-      "updated": "2026-11-24",
+      "updated": "2026-11-28",
       "homepage": "https://github.com/duyanhehe/nixus-store/tree/main/packs/nixus.rea",
       "source": "https://github.com/morluto/rea",
       "license": "MIT",
       "upstream": {
         "repo": "morluto/rea",
         "ref": "main",
-        "commit": "dda2d4029548f820bf5621b3bc1dd1ce381446a2",
-        "synced": "2026-11-09"
+        "commit": "0c7ebd68c4818a55cdd013ac73ccd9b41e141e07",
+        "synced": "2026-11-28"
       },
       "provides": {
         "skills": [
@@ -4152,13 +4132,10 @@
         ]
       },
       "download": {
-        "url": "dist/nixus-rea-1.0.11.zip",
-        "sha256": "d8b53cd65db9417d28c4c24b2e99114502a7db2c571330f53c0f03f18a003909",
-        "size": 75931
-      },
-      "replaces": [
-        "javis.rea"
-      ]
+        "url": "dist/nixus-rea-1.0.12.zip",
+        "sha256": "107fc7f6577571267619ef4151c6da7ec6827b68b02812c7357cfe2570cab4aa",
+        "size": 99256
+      }
     },
     {
       "id": "nixus.ui-ux-pro-max",
@@ -4171,7 +4148,7 @@
         "vi": "Bộ skill thiết kế giao diện nổi nhất: kho phong cách, bảng màu, cặp font và quy tắc UX để AI dựng trang web, landing page, banner, slide và hệ thống thiết kế đẹp ngay lần đầu. Cần Python 3.",
         "en": "The most popular interface design skills: a library of styles, palettes, font pairings and UX rules so the AI builds websites, landing pages, banners, slides and design systems that look right first time. Needs Python 3."
       },
-      "version": "1.0.1",
+      "version": "1.0.2",
       "author": {
         "name": "Next Level Builder",
         "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill"
@@ -4183,15 +4160,15 @@
       },
       "tier": "code",
       "verified": true,
-      "updated": "2026-11-24",
+      "updated": "2026-11-28",
       "homepage": "https://github.com/duyanhehe/nixus-store/tree/main/packs/nixus.ui-ux-pro-max",
       "source": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
       "license": "MIT",
       "upstream": {
         "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
         "ref": "main",
-        "commit": "28b3b8dee8c976df4fa3e94aed4e092ad43fcb03",
-        "synced": "2026-10-28"
+        "commit": "11ca2b3bdd555649f278ee348c32a9302b24dcf1",
+        "synced": "2026-11-28"
       },
       "provides": {
         "skills": [
@@ -4205,13 +4182,10 @@
         ]
       },
       "download": {
-        "url": "dist/nixus-ui-ux-pro-max-1.0.1.zip",
-        "sha256": "d255aa48edaaf4104ea10cd1211a395efb10c94b9eb719be53034389b452c63e",
-        "size": 3552654
-      },
-      "replaces": [
-        "javis.ui-ux-pro-max"
-      ]
+        "url": "dist/nixus-ui-ux-pro-max-1.0.2.zip",
+        "sha256": "107de9c146133b1ede85bdcf256a91b331ff24464ec29324613a0343ff12b0db",
+        "size": 3617952
+      }
     },
     {
       "id": "nixus.vercel-skills",
@@ -4224,7 +4198,7 @@
         "vi": "Skill chính chủ của Vercel: thực hành tốt nhất cho React và Next.js, React Native, hiệu ứng chuyển trang, nguyên tắc thiết kế giao diện web, viết nội dung rõ ràng, và triển khai lên Vercel.",
         "en": "Vercel's official skills: React and Next.js best practices, React Native, view transitions, web interface design guidelines, clear writing, and deploying to Vercel."
       },
-      "version": "1.0.1",
+      "version": "1.0.2",
       "author": {
         "name": "Vercel",
         "url": "https://github.com/vercel-labs/agent-skills"
@@ -4236,15 +4210,15 @@
       },
       "tier": "data",
       "verified": true,
-      "updated": "2026-11-24",
+      "updated": "2026-11-28",
       "homepage": "https://github.com/duyanhehe/nixus-store/tree/main/packs/nixus.vercel-skills",
       "source": "https://github.com/vercel-labs/agent-skills",
       "license": "MIT",
       "upstream": {
         "repo": "vercel-labs/agent-skills",
         "ref": "main",
-        "commit": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
-        "synced": "2026-10-28"
+        "commit": "5a37a6329fbad3666c3207392a6a7c0110e92efb",
+        "synced": "2026-11-28"
       },
       "provides": {
         "skills": [
@@ -4260,13 +4234,10 @@
         ]
       },
       "download": {
-        "url": "dist/nixus-vercel-skills-1.0.1.zip",
-        "sha256": "b9c0ca109b46e301705c2554c17ce2eb2ee3c02ab4d9c084b83b92b197bfbc22",
-        "size": 554271
-      },
-      "replaces": [
-        "javis.vercel-skills"
-      ]
+        "url": "dist/nixus-vercel-skills-1.0.2.zip",
+        "sha256": "099e8abc58abbfd2866efe0941652d207a7758eb1bf2bdc69ab4434f8965a38b",
+        "size": 558717
+      }
     },
     {
       "id": "nixus.video-use",
@@ -4327,7 +4298,7 @@
         "vi": "Skill lập kế hoạch kiểu Manus: việc dài được chia thành kế hoạch, ghi chú và tiến độ trong tệp markdown, nên AI không quên mục tiêu giữa chừng và làm tiếp được sau khi gián đoạn.",
         "en": "Manus-style planning: long tasks keep their plan, findings and progress in markdown files, so the AI does not lose the goal halfway and can pick up after an interruption."
       },
-      "version": "1.0.1",
+      "version": "1.0.2",
       "author": {
         "name": "Ahmad Othman Adi",
         "url": "https://github.com/OthmanAdi/planning-with-files"
@@ -4339,15 +4310,15 @@
       },
       "tier": "code",
       "verified": true,
-      "updated": "2026-11-24",
+      "updated": "2026-11-28",
       "homepage": "https://github.com/duyanhehe/nixus-store/tree/main/packs/nixus.planning-with-files",
       "source": "https://github.com/OthmanAdi/planning-with-files",
       "license": "MIT",
       "upstream": {
         "repo": "OthmanAdi/planning-with-files",
         "ref": "master",
-        "commit": "dcdfb278de53fdb69b2067ea173dbb1de45345a3",
-        "synced": "2026-10-28"
+        "commit": "189fd09fecb246a4064f2cd0635153b5297f5369",
+        "synced": "2026-11-28"
       },
       "provides": {
         "skills": [
@@ -4355,13 +4326,10 @@
         ]
       },
       "download": {
-        "url": "dist/nixus-planning-with-files-1.0.1.zip",
-        "sha256": "9bd770361097f4139b0aec4ae6f7bb99bc79d9dbc4abbbc18a5c1da0c8932e05",
-        "size": 161968
-      },
-      "replaces": [
-        "javis.planning-with-files"
-      ]
+        "url": "dist/nixus-planning-with-files-1.0.2.zip",
+        "sha256": "ac86537e9b5f279fd47077424aaa616cf4d449faf897c1b2a5cbfb62df48c821",
+        "size": 188066
+      }
     },
     {
       "id": "nixus.flowkit",
@@ -15867,7 +15835,7 @@
         "vi": "24 skill SEO của Claude SEO: kiểm tra cả website, phân tích từng trang, SEO kỹ thuật và Core Web Vitals, schema, sitemap, nội dung E-E-A-T, SEO địa phương, thương mại điện tử, backlink, SEO cho AI (GEO). Cần Python 3.11 trở lên.",
         "en": "24 Claude SEO skills: full site audits, single-page analysis, technical SEO and Core Web Vitals, schema, sitemaps, E-E-A-T content, local SEO, ecommerce, backlinks and AI search (GEO). Needs Python 3.11 or newer."
       },
-      "version": "1.0.3",
+      "version": "1.0.4",
       "author": {
         "name": "AgriciDaniel",
         "url": "https://github.com/AgriciDaniel/claude-seo"
@@ -15879,15 +15847,15 @@
       },
       "tier": "code",
       "verified": true,
-      "updated": "2026-11-24",
+      "updated": "2026-11-28",
       "homepage": "https://github.com/duyanhehe/nixus-store/tree/main/packs/nixus.claude-seo",
       "source": "https://github.com/AgriciDaniel/claude-seo",
       "license": "MIT",
       "upstream": {
         "repo": "AgriciDaniel/claude-seo",
         "ref": "main",
-        "commit": "6be93f45064ffbadced572b5d5c95f55fd263af0",
-        "synced": "2026-11-06"
+        "commit": "5d7d85ef32ade08dd4265cb678af8357ca6e6098",
+        "synced": "2026-11-28"
       },
       "provides": {
         "skills": [
@@ -15895,6 +15863,7 @@
           "seo-agentic",
           "seo-audit",
           "seo-backlinks",
+          "seo-bing",
           "seo-cluster",
           "seo-competitor-pages",
           "seo-content",
@@ -15910,21 +15879,20 @@
           "seo-maps",
           "seo-page",
           "seo-plan",
+          "seo-posthog",
           "seo-programmatic",
           "seo-schema",
+          "seo-shopify",
           "seo-sitemap",
           "seo-sxo",
           "seo-technical"
         ]
       },
       "download": {
-        "url": "dist/nixus-claude-seo-1.0.3.zip",
-        "sha256": "13eb0f69a19dfc2f1dbb081551d3d92038d480fcc74fb91589f3ccb841b5b494",
-        "size": 676414
-      },
-      "replaces": [
-        "javis.claude-seo"
-      ]
+        "url": "dist/nixus-claude-seo-1.0.4.zip",
+        "sha256": "bacc2def685e37ca67fd014682294d94d1f670882e80b93abc138ed3ad6af623",
+        "size": 845524
+      }
     },
     {
       "id": "nixus.scrapling",
